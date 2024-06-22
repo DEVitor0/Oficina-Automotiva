@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAAAA,MAAM","sources":["webpack://hospedagem/./src/assets/js/script.js"],"sourcesContent":["alert('oiii')"],"names":["alert"],"sourceRoot":""}
