@@ -1,0 +1,13 @@
+@use "./textos";
+
+@mixin navegaçãoItens($cor, $tamanho) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    ul li {
+        @include listasMenu($cor, $tamanho);
+        list-style-type: none;
+    }
+}

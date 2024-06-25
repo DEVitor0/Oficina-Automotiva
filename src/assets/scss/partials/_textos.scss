@@ -1,0 +1,23 @@
+$poppins: "../../font/Poppins/";
+$roboto: "../../font/Roboto";
+
+@mixin poppins($definicao) {
+    @font-face {
+        font-family: "Poppins";
+        src: url("#{$poppins}#{$definicao}");
+    }
+}
+
+@mixin roboto($definicao) {
+    @font-face {
+        font-family: "Roboto";
+        src: url("#{$Roboto}#{$definicao}");
+    }
+}
+
+@mixin listasMenu($cor, $tamanho) {
+    @include roboto("Roboto-Light.ttf");
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 22px;
+    color: $cor;
+}
