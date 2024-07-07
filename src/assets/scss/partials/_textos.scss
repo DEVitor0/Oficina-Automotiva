@@ -1,5 +1,7 @@
 $poppins: "../../font/Poppins/";
-$roboto: "../../font/Roboto";
+$roboto: "../../font/Roboto/";
+
+@use "./cores";
 
 @mixin poppins($definicao) {
     @font-face {
@@ -20,4 +22,24 @@ $roboto: "../../font/Roboto";
     font-family: "Roboto", Helvetica, sans-serif;
     font-size: 22px;
     color: $cor;
+}
+
+@mixin titulos($tamanhoFonte, $fonte) {
+    @include poppins($fonte);
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: $tamanhoFonte;
+    color: $titulos;
+
+    span {
+        color: $numero-titulos;
+        font-size: inherit;
+        margin-right: 5px;
+    }
+}
+
+@mixin textos() {
+    @include poppins("Poppins-Light.ttf");
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 16px;
+    color: $textos;
 }
