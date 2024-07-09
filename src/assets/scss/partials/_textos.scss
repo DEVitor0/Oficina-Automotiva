@@ -1,5 +1,5 @@
-$poppins: "../../font/Poppins/";
-$roboto: "../../font/Roboto/";
+$poppins: "../../../src/assets/font/Poppins/";
+$roboto: "../../../src/assets/font/Roboto/";
 
 @use "./cores";
 
@@ -13,14 +13,14 @@ $roboto: "../../font/Roboto/";
 @mixin roboto($definicao) {
     @font-face {
         font-family: "Roboto";
-        src: url("#{$Roboto}#{$definicao}");
+        src: url("#{$roboto}#{$definicao}");
     }
 }
 
-@mixin listasMenu($cor, $tamanho) {
+@mixin listasMenu($cor) {
     @include roboto("Roboto-Light.ttf");
+    list-style-type: none;
     font-family: "Roboto", Helvetica, sans-serif;
-    font-size: 22px;
     color: $cor;
 }
 

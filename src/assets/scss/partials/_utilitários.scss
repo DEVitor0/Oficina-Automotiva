@@ -1,21 +1,30 @@
 @use "./textos";
 @use "./cores";
 
-@mixin navegaçãoItens($cor, $tamanho) {
+@mixin navegaçãoItens($cor, $cor2, $tamanho) {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
 
-    ul li {
-        @include listasMenu($cor, $tamanho);
-        list-style-type: none;
+    li {
+        @include textos.listasMenu($cor);
+        cursor: pointer;
+
+        color: white;
+        font-size: $tamanho;
+        transition: 0.2s ease-in;
+
+        &:hover {
+            color: cores.$efeitos;
+        }
     }
 }
 
 @mixin botões() {
     border-radius: 100%;
     background-color: transparent;
+
     &:hover {
         border: none;
         background-color: $especial;
