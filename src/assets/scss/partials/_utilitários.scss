@@ -5,18 +5,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
 
     li {
-        @include textos.listasMenu($cor);
+        @include textos.listasMenu();
         cursor: pointer;
 
-        color: white;
+        color: $cor;
         font-size: $tamanho;
         transition: 0.2s ease-in;
 
         &:hover {
-            color: cores.$efeitos;
+            color: $cor2;
         }
     }
 }

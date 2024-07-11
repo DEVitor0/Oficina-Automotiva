@@ -7,14 +7,17 @@
 }
 
 #header {
-    height: 300px;
+    height: 38vw;
+    min-height: 420px;
     width: 100%;
     background-color: #17755A;
     background-image: url("../../../src/assets/img/bg1.png");
     background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
+    position: relative;
 }
 
 #header .header__nav {
@@ -37,4 +40,102 @@
 #header .header__nav .nav__item .nav__item-container ul {
     @include propiedades.navegaçãoItens(propiedades.$textos-especiais, propiedades.$efeitos, 18px);
     gap: 40px;
+}
+
+#header #header__destaque {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 12vh;
+}
+
+#header #header__destaque h2 {
+    @include propiedades.roboto("Roboto-Black.ttf", "Black");
+    text-transform: uppercase;
+    font-family: "Roboto-Black";
+    font-size: 12vw;
+    font-style: italic;
+    text-decoration: underline;
+    color: propiedades.$textos-especiais;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    transform: translateY(-30px);
+}
+
+#header #header__destaque .header__destaque__imagens {
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#header #header__destaque .header__destaque__imagens div {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+}
+
+#header #header__destaque .header__destaque__imagens #header__destaque__imagens-item {
+    background-image: url("../../../src/assets/img/bg-1-1.png"); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças {
+    width: 100%;
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../../src/assets/img/bg-2.png"); 
+    background-attachment: scroll;
+    background-size: cover;
+    z-index: 2; 
+}
+
+#header .header__extra {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header .header__extra .header__extra-elementos {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap: 100px;
+}
+
+#header .header__extra .header__extra-elementos p {
+    @include propiedades.roboto("Roboto-Bold.ttf", "Bold");
+    font-family: "Roboto-Bold", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 16px;
+    color: propiedades.$textos-especiais;
+}
+
+#header .header__extra .header__extra-elementos i {
+    color: #FFFB38;
+    margin-left: 6px;
 }

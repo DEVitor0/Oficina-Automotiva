@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +6,17 @@
 }
 
 #header {
-  height: 300px;
+  height: 38vw;
+  min-height: 420px;
   width: 100%;
   background-color: #17755A;
   background-image: url("../../../src/assets/img/bg1.png");
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
+  position: relative;
 }
 
 #header .header__nav {
@@ -36,22 +40,124 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
   gap: 40px;
 }
 #header .header__nav .nav__item .nav__item-container ul li {
   list-style-type: none;
-  font-family: "Roboto", Helvetica, sans-serif;
-  color: #FFFFFF;
+  font-family: "Roboto-Light", Helvetica, sans-serif;
   cursor: pointer;
-  color: white;
+  color: #FFFFFF;
   font-size: 18px;
   transition: 0.2s ease-in;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Roboto-Light";
   src: url("../../../src/assets/font/Roboto/Roboto-Light.ttf");
 }
 #header .header__nav .nav__item .nav__item-container ul li:hover {
   color: #FFFB38;
+}
+
+#header #header__destaque {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12vh;
+}
+
+#header #header__destaque h2 {
+  text-transform: uppercase;
+  font-family: "Roboto-Black";
+  font-size: 12vw;
+  font-style: italic;
+  text-decoration: underline;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transform: translateY(-30px);
+}
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../../../src/assets/font/Roboto/Roboto-Black.ttf");
+}
+
+#header #header__destaque .header__destaque__imagens {
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#header #header__destaque .header__destaque__imagens div {
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+}
+
+#header #header__destaque .header__destaque__imagens #header__destaque__imagens-item {
+  background-image: url("../../../src/assets/img/bg-1-1.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+#header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças {
+  width: 100%;
+  height: 40vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../../src/assets/img/bg-2.png");
+  background-attachment: scroll;
+  background-size: cover;
+  z-index: 2;
+}
+
+#header .header__extra {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#header .header__extra .header__extra-elementos {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  gap: 100px;
+}
+
+#header .header__extra .header__extra-elementos p {
+  font-family: "Roboto-Bold", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../../src/assets/font/Roboto/Roboto-Bold.ttf");
+}
+
+#header .header__extra .header__extra-elementos i {
+  color: #FFFB38;
+  margin-left: 6px;
 }/*# sourceMappingURL=style.css.map */

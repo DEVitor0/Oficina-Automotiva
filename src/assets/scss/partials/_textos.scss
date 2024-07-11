@@ -3,29 +3,28 @@ $roboto: "../../../src/assets/font/Roboto/";
 
 @use "./cores";
 
-@mixin poppins($definicao) {
+@mixin poppins($definicao, $nome) {
     @font-face {
-        font-family: "Poppins";
+        font-family: "Poppins-#{$nome}";
         src: url("#{$poppins}#{$definicao}");
     }
 }
 
-@mixin roboto($definicao) {
+@mixin roboto($definicao, $nome) {
     @font-face {
-        font-family: "Roboto";
+        font-family: "Roboto-#{$nome}";
         src: url("#{$roboto}#{$definicao}");
     }
 }
 
-@mixin listasMenu($cor) {
-    @include roboto("Roboto-Light.ttf");
+@mixin listasMenu() {
+    @include roboto("Roboto-Light.ttf", "Light");
     list-style-type: none;
-    font-family: "Roboto", Helvetica, sans-serif;
-    color: $cor;
+    font-family: "Roboto-Light", Helvetica, sans-serif;
 }
 
 @mixin titulos($tamanhoFonte, $fonte) {
-    @include poppins($fonte);
+    @include poppins($fonte); /*Arrumar isso mais tarde, colocando a devida fonte*/
     font-family: "Poppins", Helvetica, sans-serif;
     font-size: $tamanhoFonte;
     color: $titulos;
