@@ -1,6 +1,8 @@
 @use "./propiedades";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,124 +20,183 @@
     justify-content: space-between;
     flex-direction: column;
     position: relative;
+
+    .header__nav {
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 20px;
+
+        .nav__item {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            .nav__item-container ul {
+                @include propiedades.navegaçãoItens(propiedades.$textos-especiais, propiedades.$efeitos, 18px);
+                gap: 40px;
+            }
+        }
+    }
+
+    #header__destaque {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 12vh;
+
+        h1 {
+            @include propiedades.roboto("Roboto-Black.ttf", "Black");
+            text-transform: uppercase;
+            font-family: "Roboto-Black";
+            font-size: 12vw;
+            font-style: italic;
+            text-decoration: underline;
+            color: propiedades.$textos-especiais;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            transform: translateY(-30px);
+        }
+
+        .header__destaque__imagens {
+            width: 100%;
+            height: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            div {
+                width: inherit;
+                height: inherit;
+                background-size: cover;
+            }
+
+            #header__destaque__imagens-item {
+                background-image: url("../../../src/assets/img/bg-1-1.png");
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+            }
+
+            .header__destaque__imagens-Fumaças {
+                width: 100%;
+                height: 40vw;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url("../../../src/assets/img/bg-2.png");
+                background-attachment: scroll;
+                background-size: cover;
+                z-index: 2;
+            }
+        }
+    }
+
+    .header__extra {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .header__extra-elementos {
+            width: 50%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            margin-bottom: 30px;
+            gap: 100px;
+
+            p {
+                @include propiedades.roboto("Roboto-Bold.ttf", "Bold");
+                font-family: "Roboto-Bold", Helvetica, sans-serif;
+                text-transform: uppercase;
+                font-style: italic;
+                font-size: 16px;
+                color: propiedades.$textos-especiais;
+            }
+
+            i {
+                color: #FFFB38;
+                margin-left: 6px;
+            }
+        }
+    }
 }
 
-#header .header__nav {
-    width: inherit;
+.sections {
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    padding: 20px;
-}
 
-#header .header__nav .nav__item {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
+    .sections__pop-up {
+        width: 40%;
+        height: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.158);
+        padding: 40px;
 
-#header .header__nav .nav__item .nav__item-container ul {
-    @include propiedades.navegaçãoItens(propiedades.$textos-especiais, propiedades.$efeitos, 18px);
-    gap: 40px;
-}
+        .sections__pop-up__titulo {
+            width: 100%;
+            margin-bottom: 20px;
 
-#header #header__destaque {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 12vh;
-}
+            .sections__pop-up__subtitulo {
+                @include propiedades.textos();
+                color: propiedades.$subtitulos;
+            }
+            
+            h2 {
+                @include propiedades.titulos();
+            }
+        }
 
-#header #header__destaque h1 {
-    @include propiedades.roboto("Roboto-Black.ttf", "Black");
-    text-transform: uppercase;
-    font-family: "Roboto-Black";
-    font-size: 12vw;
-    font-style: italic;
-    text-decoration: underline;
-    color: propiedades.$textos-especiais;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    transform: translateY(-30px);
-}
+        .sections__pop-up__caixas {
+            width: 100%;
 
-#header #header__destaque .header__destaque__imagens {
-    width: 100%;
-    height: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
+            .sections__pop-up__caixas__titulos {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #EDEDED;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
 
-#header #header__destaque .header__destaque__imagens div {
-    width: inherit;
-    height: inherit;
-    background-size: cover;
-}
+                p {
+                    @include propiedades.poppins("Poppins-SemiBold.ttf", "SemiBold");
+                    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                }
+            }
 
-#header #header__destaque .header__destaque__imagens #header__destaque__imagens-item {
-    background-image: url("../../../src/assets/img/bg-1-1.png"); 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
+            .sections__pop-up__caixas__textos {
+                display: none; /*Criar abertura e fechamento dos itens*/
+            }
+        }
 
-#header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças {
-    width: 100%;
-    height: 40vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../../../src/assets/img/bg-2.png"); 
-    background-attachment: scroll;
-    background-size: cover;
-    z-index: 2; 
-}
-
-#header .header__extra {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#header .header__extra .header__extra-elementos {
-    width: 50%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 30px;
-    gap: 100px;
-}
-
-#header .header__extra .header__extra-elementos p {
-    @include propiedades.roboto("Roboto-Bold.ttf", "Bold");
-    font-family: "Roboto-Bold", Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-style: italic;
-    font-size: 16px;
-    color: propiedades.$textos-especiais;
-}
-
-#header .header__extra .header__extra-elementos i {
-    color: #FFFB38;
-    margin-left: 6px;
+        button {
+            border: 1px solid black;
+            width: 120px;
+            @include propiedades.botões();
+        }
+    }
 }

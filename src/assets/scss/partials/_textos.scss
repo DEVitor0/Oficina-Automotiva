@@ -23,22 +23,23 @@ $roboto: "../../../src/assets/font/Roboto/";
     font-family: "Roboto-Light", Helvetica, sans-serif;
 }
 
-@mixin titulos($tamanhoFonte, $fonte) {
-    @include poppins($fonte); /*Arrumar isso mais tarde, colocando a devida fonte*/
-    font-family: "Poppins", Helvetica, sans-serif;
-    font-size: $tamanhoFonte;
-    color: $titulos;
+@mixin titulos() {
+    @include poppins("Poppins-Regular.ttf", "Regular");
+    font-weight: normal;
+    font-family: "Poppins-Regular";
+    font-size: 32px;
+    color: cores.$titulos;
 
     span {
-        color: $numero-titulos;
+        color: cores.$especial;
         font-size: inherit;
         margin-right: 5px;
+        font-weight: 700;
     }
 }
 
 @mixin textos() {
-    @include poppins("Poppins-Light.ttf");
-    font-family: "Poppins", Helvetica, sans-serif;
+    @include poppins("Poppins-Light.ttf", "Light");
+    font-family: "Poppins-Light", Helvetica, sans-serif;
     font-size: 16px;
-    color: $textos;
 }

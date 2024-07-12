@@ -21,12 +21,18 @@
 }
 
 @mixin botões() {
-    border-radius: 100%;
+    border-radius: 30px;
     background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    font-weight: 300;
+    cursor: pointer;
 
     &:hover {
+        transition: all 0.3s ease-in;
         border: none;
-        background-color: $especial;
+        background-color: cores.$especial;
         color: white;
     }
 }

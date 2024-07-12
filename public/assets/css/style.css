@@ -1,5 +1,7 @@
 @charset "UTF-8";
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,7 +20,6 @@
   flex-direction: column;
   position: relative;
 }
-
 #header .header__nav {
   width: inherit;
   display: flex;
@@ -27,7 +28,6 @@
   flex-direction: row;
   padding: 20px;
 }
-
 #header .header__nav .nav__item {
   width: 80%;
   display: flex;
@@ -35,7 +35,6 @@
   align-items: center;
   flex-direction: row;
 }
-
 #header .header__nav .nav__item .nav__item-container ul {
   display: flex;
   justify-content: space-around;
@@ -57,7 +56,6 @@
 #header .header__nav .nav__item .nav__item-container ul li:hover {
   color: #FFFB38;
 }
-
 #header #header__destaque {
   position: relative;
   z-index: 1;
@@ -68,7 +66,6 @@
   width: 100%;
   margin-bottom: 12vh;
 }
-
 #header #header__destaque h1 {
   text-transform: uppercase;
   font-family: "Roboto-Black";
@@ -85,7 +82,6 @@
   font-family: "Roboto-Black";
   src: url("../../../src/assets/font/Roboto/Roboto-Black.ttf");
 }
-
 #header #header__destaque .header__destaque__imagens {
   width: 100%;
   height: 40vw;
@@ -98,13 +94,11 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-
 #header #header__destaque .header__destaque__imagens div {
   width: inherit;
   height: inherit;
   background-size: cover;
 }
-
 #header #header__destaque .header__destaque__imagens #header__destaque__imagens-item {
   background-image: url("../../../src/assets/img/bg-1-1.png");
   position: absolute;
@@ -115,7 +109,6 @@
   transform: translate(-50%, -50%);
   z-index: 3;
 }
-
 #header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças {
   width: 100%;
   height: 40vw;
@@ -127,14 +120,12 @@
   background-size: cover;
   z-index: 2;
 }
-
 #header .header__extra {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 #header .header__extra .header__extra-elementos {
   width: 50%;
   display: flex;
@@ -144,7 +135,6 @@
   margin-bottom: 30px;
   gap: 100px;
 }
-
 #header .header__extra .header__extra-elementos p {
   font-family: "Roboto-Bold", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -156,8 +146,90 @@
   font-family: "Roboto-Bold";
   src: url("../../../src/assets/font/Roboto/Roboto-Bold.ttf");
 }
-
 #header .header__extra .header__extra-elementos i {
   color: #FFFB38;
   margin-left: 6px;
+}
+
+.sections {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sections .sections__pop-up {
+  width: 40%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.158);
+  padding: 40px;
+}
+.sections .sections__pop-up .sections__pop-up__titulo {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sections .sections__pop-up .sections__pop-up__titulo .sections__pop-up__subtitulo {
+  font-family: "Poppins-Light", Helvetica, sans-serif;
+  font-size: 16px;
+  color: #737373;
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../../../src/assets/font/Poppins/Poppins-Light.ttf");
+}
+.sections .sections__pop-up .sections__pop-up__titulo h2 {
+  font-weight: normal;
+  font-family: "Poppins-Regular";
+  font-size: 32px;
+  color: #3C3C3C;
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../../../src/assets/font/Poppins/Poppins-Regular.ttf");
+}
+.sections .sections__pop-up .sections__pop-up__titulo h2 span {
+  color: #009688;
+  font-size: inherit;
+  margin-right: 5px;
+  font-weight: 700;
+}
+.sections .sections__pop-up .sections__pop-up__caixas {
+  width: 100%;
+}
+.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EDEDED;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos p {
+  font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../../../src/assets/font/Poppins/Poppins-SemiBold.ttf");
+}
+.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos {
+  display: none; /*Criar abertura e fechamento dos itens*/
+}
+.sections .sections__pop-up button {
+  border: 1px solid black;
+  width: 120px;
+  border-radius: 30px;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Poppins-Light", Helvetica, sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+.sections .sections__pop-up button:hover {
+  transition: all 0.3s ease-in;
+  border: none;
+  background-color: #009688;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
