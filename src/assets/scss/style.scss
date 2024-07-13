@@ -20,6 +20,7 @@
     justify-content: space-between;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 
     .header__nav {
         width: inherit;
@@ -146,14 +147,18 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     .sections__pop-up {
         width: 40%;
         height: auto;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.158);
+        background-color: white;
         padding: 40px;
+        z-index: 15;
+        position: relative;
+        top: -6.5vh;
+        margin-left: 5vw;
 
         .sections__pop-up__titulo {
             width: 100%;
@@ -197,6 +202,38 @@
             border: 1px solid black;
             width: 120px;
             @include propiedades.botões();
+        }
+    }
+
+    .sections__container-video {
+        width: 40vw; 
+        max-width: 600px; 
+        min-width: 300px; 
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #f8f9fa; 
+
+        .sections__container-video__capa {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; 
+            z-index: 200;
+            overflow: hidden;
+            border-radius: 10px;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 10px;
+            }
         }
     }
 }
