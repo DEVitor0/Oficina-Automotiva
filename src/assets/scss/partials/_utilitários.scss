@@ -36,3 +36,9 @@
         color: white;
     }
 }
+
+@mixin flexContainer($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}

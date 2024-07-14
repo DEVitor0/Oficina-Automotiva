@@ -15,26 +15,20 @@
     background-color: #17755A;
     background-image: url("../../../src/assets/img/bg1.png");
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include propiedades.flexContainer(space-between, center);
     flex-direction: column;
     position: relative;
     z-index: 1;
 
     .header__nav {
         width: inherit;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include propiedades.flexContainer(center, center);
         flex-direction: row;
         padding: 20px;
 
         .nav__item {
             width: 80%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include propiedades.flexContainer(space-between, center);
             flex-direction: row;
 
             .nav__item-container ul {
@@ -47,9 +41,7 @@
     #header__destaque {
         position: relative;
         z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include propiedades.flexContainer(center, center);
         flex-direction: column;
         width: 100%;
         margin-bottom: 12vh;
@@ -71,9 +63,7 @@
         .header__destaque__imagens {
             width: 100%;
             height: 40vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include propiedades.flexContainer(center, center);
             position: absolute;
             top: 50%;
             left: 50%;
@@ -113,15 +103,11 @@
 
     .header__extra {
         width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        @include propiedades.flexContainer(flex-end, center);
 
         .header__extra-elementos {
             width: 50%;
-            display: flex;
-            justify-content: left;
-            align-items: center;
+            @include propiedades.flexContainer(left, center);
             flex-direction: row;
             margin-bottom: 30px;
             gap: 100px;
@@ -146,8 +132,22 @@
 .sections {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
+    @include propiedades.flexContainer(center, center);
+    margin-bottom: 8vh;
+
+    .section__titulos {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .section__titulos__subtitulo {
+            @include propiedades.textos();
+            color: propiedades.$subtitulos;
+        }
+        
+        h2 {
+            @include propiedades.titulos();
+        }
+    }
 
     .sections__pop-up {
         width: 40%;
@@ -160,19 +160,6 @@
         top: -6.5vh;
         margin-left: 5vw;
 
-        .sections__pop-up__titulo {
-            width: 100%;
-            margin-bottom: 20px;
-
-            .sections__pop-up__subtitulo {
-                @include propiedades.textos();
-                color: propiedades.$subtitulos;
-            }
-            
-            h2 {
-                @include propiedades.titulos();
-            }
-        }
 
         .sections__pop-up__caixas {
             width: 100%;
@@ -181,10 +168,8 @@
                 width: 100%;
                 padding: 10px;
                 border: 1px solid #EDEDED;
-                display: flex;
+                @include propiedades.flexContainer(space-between, center);
                 flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
                 margin-bottom: 20px;
                 cursor: pointer;
         
@@ -232,7 +217,7 @@
         .sections__container-video__capa {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; 
+            padding-top: 53.25%; 
             z-index: 200;
             overflow: hidden;
             border-radius: 10px;
@@ -245,6 +230,35 @@
                 height: 100%;
                 border: none;
                 border-radius: 10px;
+            }
+        }
+    }
+
+    .sections__container-serviços {
+        width: 90%;
+        height: auto;
+
+        .sections__container-serviços__agrupador {
+            width: 100%;
+            height: auto;
+            @include propiedades.flexContainer(flex-start, flex-start);
+            flex-wrap: wrap;
+            gap: 40px;
+
+            .sections__container-serviços__agrupador__textos {
+                width: 30%; 
+                height: auto;
+
+                h3 {
+                    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-family: "Poppins-Light", Helvetica, sans-serif;
+                    text-align: justify;
+                    margin-right: 20px;
+                }
             }
         }
     }
