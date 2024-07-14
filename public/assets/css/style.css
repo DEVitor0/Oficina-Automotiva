@@ -210,6 +210,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos p {
   font-family: "Poppins-SemiBold", Helvetica, sans-serif;
@@ -219,7 +220,17 @@
   src: url("../../../src/assets/font/Poppins/Poppins-SemiBold.ttf");
 }
 .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos {
-  display: none; /*Criar abertura e fechamento dos itens*/
+  width: 100%;
+  margin: 10px 0;
+  font-family: "Poppins-Light", Helvetica, sans-serif;
+  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos.open {
+  max-height: 200px;
+  padding: 10px 0;
 }
 .sections .sections__pop-up button {
   border: 1px solid black;
