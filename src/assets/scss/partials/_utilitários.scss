@@ -42,3 +42,16 @@
     justify-content: $x;
     align-items: $y;
 }
+
+@mixin set-grid($cols, $gap) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+}
+
+@mixin grid-item($span, $start: auto) {
+    grid-column: span $span;
+    @if $start != auto {
+        grid-column-start: $start;
+    }
+}
