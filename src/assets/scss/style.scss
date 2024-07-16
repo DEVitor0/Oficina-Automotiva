@@ -333,5 +333,80 @@
                 background-image: url("../../../src/assets/img/carros/poster6.jpg");
             }
         }
-    }    
+    }
+
+    .sections__opiniões {
+        width: 65%;
+        height: auto;
+        @include propiedades.flexContainer(center, flex-start); 
+        flex-direction: column;
+    
+        .sections__opiniões__gerenciador {
+            @include propiedades.flexContainer(center, center);
+            gap: 50px;
+            overflow: hidden; 
+            position: relative;
+    
+            .sections__opiniões__itens {
+                width: 50%;
+                height: inherit;
+                @include propiedades.flexContainer(flex-start, flex-start);
+                flex-direction: row;
+                gap: 20px;
+                transition: transform 0.3s ease-in-out;
+    
+                .sections__opiniões__itens__aspas {
+                    display: flex;
+                    align-items: flex-start;
+    
+                    span {
+                        @font-face {
+                            font-family: "aspas";
+                            src: url("../../../src/assets/font/Coustard/Coustard-Regular.ttf");
+                        }
+                        font-size: 6vw;
+                        font-family: "aspas", Helvetica, sans-serif;
+                        color: #97989b;
+                    }
+                }
+    
+                .sections__opiniões__itens__textos {
+                    @font-face {
+                        font-family: "nunito-light";
+                        src: url("../../../src/assets/font/Nunito/Nunito-Light.ttf");
+                    }
+                    font-family: "nunito-light", Helvetica, sans-serif;
+                    text-align: justify;
+    
+                    .sections__opiniões__itens__textos__autores__nome {
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+    
+                    .sections__opiniões__itens__textos__autores__status {
+                        color: #636464;
+                        font-size: 1em;
+                        margin-left: 1px;
+                    }
+                }
+            }
+        }
+    
+        .sections__opiniões__navegação {
+            width: 100%;
+            height: auto;
+            @include propiedades.flexContainer(center, center);
+            gap: 10px;
+    
+            .sections__opiniões__navegação__pontos {
+                width: 0.7vw;
+                height: 0.7vw;
+                border-radius: 100%;
+                background-color: #97989b;
+                cursor: pointer; 
+            }
+        }
+    }
+    
 }

@@ -364,4 +364,76 @@
 }
 .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(6) {
   background-image: url("../../../src/assets/img/carros/poster6.jpg");
+}
+.sections .sections__opiniões {
+  width: 65%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas {
+  display: flex;
+  align-items: flex-start;
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas span {
+  font-size: 6vw;
+  font-family: "aspas", Helvetica, sans-serif;
+  color: #97989b;
+}
+@font-face {
+  font-family: "aspas";
+  src: url("../../../src/assets/font/Coustard/Coustard-Regular.ttf");
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos {
+  font-family: "nunito-light", Helvetica, sans-serif;
+  text-align: justify;
+}
+@font-face {
+  font-family: "nunito-light";
+  src: url("../../../src/assets/font/Nunito/Nunito-Light.ttf");
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__nome {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__status {
+  color: #636464;
+  font-size: 1em;
+  margin-left: 1px;
+}
+.sections .sections__opiniões .sections__opiniões__navegação {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sections .sections__opiniões .sections__opiniões__navegação .sections__opiniões__navegação__pontos {
+  width: 0.7vw;
+  height: 0.7vw;
+  border-radius: 100%;
+  background-color: #97989b;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
