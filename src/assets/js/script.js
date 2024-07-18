@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Gerenciamento de Pop-up
     const titulos = document.querySelectorAll('.sections__pop-up__caixas__titulos');
     const textos = document.querySelectorAll('.sections__pop-up__caixas__textos');
 
@@ -38,23 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Carrossel
     const container = document.querySelector('.sections__opiniões__gerenciador');
     const itens = document.querySelectorAll('.sections__opiniões__itens');
     const pontos = document.querySelectorAll('.sections__opiniões__navegação__pontos');
 
     let indiceAtual = 0;
-    const itensPorSlide = 2;
+    const itensPorSlide = 2; // Mostra 2 itens por slide
     const totalSlides = Math.ceil(itens.length / itensPorSlide);
 
     const atualizarCarrossel = () => {
-        itens.forEach(item => item.style.display = 'none');
+        itens.forEach(item => item.classList.remove('ativo'));
 
         for (let i = indiceAtual * itensPorSlide; i < (indiceAtual + 1) * itensPorSlide && i < itens.length; i++) {
-            itens[i].style.display = 'flex';
+            itens[i].classList.add('ativo');
         }
 
-        // Atualiza a cor das bolinhas
         pontos.forEach((ponto, indice) => {
             if (indice === indiceAtual) {
                 ponto.style.backgroundColor = '#636464';
@@ -65,8 +62,29 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const irParaSlide = (indice) => {
-        indiceAtual = indice;
-        atualizarCarrossel();
+        const slideAtual = Array.from(itens).slice(indiceAtual * itensPorSlide, (indiceAtual + 1) * itensPorSlide);
+        const novoSlide = Array.from(itens).slice(indice * itensPorSlide, (indice + 1) * itensPorSlide);
+
+        slideAtual.forEach(item => item.classList.add('fade-exit'));
+        novoSlide.forEach(item => item.classList.add('fade-enter'));
+
+        setTimeout(() => {
+            slideAtual.forEach(item => {
+                item.classList.remove('fade-exit');
+                item.classList.add('fade-exit-active');
+            });
+            novoSlide.forEach(item => {
+                item.classList.remove('fade-enter');
+                item.classList.add('fade-enter-active');
+            });
+
+            setTimeout(() => {
+                slideAtual.forEach(item => item.classList.remove('fade-exit-active'));
+                novoSlide.forEach(item => item.classList.remove('fade-enter-active'));
+                indiceAtual = indice;
+                atualizarCarrossel();
+            }, 500);
+        }, 50);
     };
 
     pontos.forEach((ponto, indice) => {
@@ -92,33 +110,28 @@ document.addEventListener('DOMContentLoaded', function () {
         const moverX = e.pageX - inicioX;
         if (moverX > 100) {
             if (indiceAtual > 0) {
-                indiceAtual--;
+                irParaSlide(indiceAtual - 1);
             } else {
-                indiceAtual = totalSlides - 1;
+                irParaSlide(totalSlides - 1);
             }
         } else if (moverX < -100) {
             if (indiceAtual < totalSlides - 1) {
-                indiceAtual++;
+                irParaSlide(indiceAtual + 1);
             } else {
-                indiceAtual = 0;
+                irParaSlide(0);
             }
         }
         arrastando = false;
-        atualizarCarrossel();
     });
 
     container.addEventListener('mouseleave', () => {
         if (!arrastando) return;
         arrastando = false;
-        atualizarCarrossel();
     });
 
     atualizarCarrossel();
 
-    //Proibido cópia
-
     const opinioesSection = document.querySelector('.sections__opiniões');
-
     opinioesSection.addEventListener('selectstart', (event) => {
         event.preventDefault();
     });

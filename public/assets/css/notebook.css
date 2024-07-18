@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   *,
   *::before,
   *::after {
@@ -131,7 +131,7 @@
     align-items: center;
   }
   #header .header__extra .header__extra-elementos {
-    width: 50%;
+    width: 53%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -161,6 +161,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 8vh;
+  }
+  .sections:first-child {
+    margin-bottom: 0;
   }
   .sections .section__titulos {
     width: 100%;
@@ -199,7 +202,7 @@
     padding: 40px;
     z-index: 15;
     position: relative;
-    top: -6.5vh;
+    top: -8.5vh;
     margin-left: 5vw;
   }
   .sections .sections__pop-up .sections__pop-up__caixas {
@@ -309,8 +312,8 @@
     margin-right: 20px;
   }
   .sections .sections__posters {
-    width: 17vw;
-    height: 30vw;
+    width: 19vw;
+    height: 32vw;
     margin-right: 30px;
     background-size: cover;
   }
@@ -318,7 +321,7 @@
     background-image: url("../../../src/assets/img/carros/modelo1.png");
   }
   .sections .sections__posters:nth-child(2) {
-    width: 23vw;
+    width: 25vw;
     background-image: url("../../../src/assets/img/carros/modelo2.png");
   }
   .sections .sections__posters:last-child {
@@ -368,7 +371,7 @@
     background-image: url("../../../src/assets/img/carros/poster6.jpg");
   }
   .sections .sections__opiniões {
-    width: 65%;
+    width: 85%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -507,9 +510,12 @@
   .footer__elementos .titulos, .footer__elementos .footer__elementos__navegação > p:first-child, .footer__elementos .footer__elementos__novidades > p:first-child {
     color: #FFFFFF;
     font-family: "Poppins-Regular", Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-size: 2.2vw;
     margin: 10px 0;
     text-align: center;
+  }
+  .footer__elementos #Noticias {
+    margin-bottom: 4vh;
   }
   .footer__elementos__navegação ul, .footer__elementos__novidades ul {
     list-style: none;
@@ -593,4 +599,4 @@
     font-family: "Poppins-Bold";
     src: url("../../../src/assets/font/Poppins/../../../assets/font/Poppins/Poppins-Bold.ttf");
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=notebook.css.map */

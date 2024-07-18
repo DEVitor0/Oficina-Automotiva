@@ -1,6 +1,6 @@
-@use "./propiedades";
-@media screen and (min-width: 1200px) {
+@use "../propiedades";
 
+@media only screen and (min-width: 992px) {
     *,
     *::before,
     *::after {
@@ -116,7 +116,7 @@
             @include propiedades.flexContainer(flex-end, center);
 
             .header__extra-elementos {
-                width: 50%;
+                width: 53%;
                 @include propiedades.flexContainer(flex-start, center);
                 flex-direction: row;
                 margin-bottom: 30px;
@@ -145,6 +145,10 @@
         @include propiedades.flexContainer(center, center);
         margin-bottom: 8vh;
 
+        &:first-child {
+            margin-bottom: 0;
+        }
+
         .section__titulos {
             width: 100%;
             margin-bottom: 20px;
@@ -167,7 +171,7 @@
             padding: 40px;
             z-index: 15;
             position: relative;
-            top: -6.5vh;
+            top: -8.5vh;
             margin-left: 5vw;
 
 
@@ -274,8 +278,8 @@
         }
 
         .sections__posters {
-            width: 17vw;
-            height: 30vw;
+            width: 19vw;
+            height: 32vw;
             margin-right: 30px;
             background-size: cover;
         }
@@ -285,7 +289,7 @@
         }
 
         .sections__posters:nth-child(2) {
-            width: 23vw;
+            width: 25vw;
             background-image: url("../../../src/assets/img/carros/modelo2.png");
         }
 
@@ -346,17 +350,17 @@
         }
 
         .sections__opiniões {
-            width: 65%;
+            width: 85%;
             height: auto;
             @include propiedades.flexContainer(center, flex-start);
             flex-direction: column;
-        
+
             .sections__opiniões__gerenciador {
                 @include propiedades.flexContainer(center, center);
                 gap: 50px;
                 overflow: hidden;
                 position: relative;
-        
+
                 .sections__opiniões__itens {
                     width: 50%;
                     height: inherit;
@@ -366,61 +370,65 @@
                     opacity: 0;
                     transition: opacity 0.5s ease-in-out;
                     display: none; // Esconde os itens por padrão
-        
+
                     &.ativo {
                         opacity: 1;
                         display: flex; // Mostra os itens ativos
                     }
-        
+
                     &.fade-enter {
                         opacity: 0;
                     }
-        
+
                     &.fade-enter-active {
                         opacity: 1;
                         transition: opacity 0.5s ease-in-out;
                     }
-        
+
                     &.fade-exit {
                         opacity: 1;
                     }
-        
+
                     &.fade-exit-active {
                         opacity: 0;
                         transition: opacity 0.5s ease-in-out;
                     }
-        
+
                     .sections__opiniões__itens__aspas {
                         display: flex;
                         align-items: flex-start;
-        
+
                         span {
                             @font-face {
                                 font-family: "aspas";
                                 src: url("../../../src/assets/font/Coustard/Coustard-Regular.ttf");
                             }
-        
+
                             font-size: 6vw;
-                            font-family: "aspas", Helvetica, sans-serif;
+                            font-family: "aspas",
+                            Helvetica,
+                            sans-serif;
                             color: #97989b;
                         }
                     }
-        
+
                     .sections__opiniões__itens__textos {
                         @font-face {
                             font-family: "nunito-light";
                             src: url("../../../src/assets/font/Nunito/Nunito-Light.ttf");
                         }
-        
-                        font-family: "nunito-light", Helvetica, sans-serif;
+
+                        font-family: "nunito-light",
+                        Helvetica,
+                        sans-serif;
                         text-align: justify;
-        
+
                         .sections__opiniões__itens__textos__autores__nome {
                             margin-top: 10px;
                             font-weight: bold;
                             font-size: 1.1em;
                         }
-        
+
                         .sections__opiniões__itens__textos__autores__status {
                             color: #636464;
                             font-size: 1em;
@@ -429,13 +437,13 @@
                     }
                 }
             }
-        
+
             .sections__opiniões__navegação {
                 width: 100%;
                 height: auto;
                 @include propiedades.flexContainer(center, center);
                 gap: 10px;
-        
+
                 .sections__opiniões__navegação__pontos {
                     width: 0.7vw;
                     height: 0.7vw;
@@ -445,7 +453,7 @@
                 }
             }
         }
-        
+
     }
 
     .footer {
@@ -496,9 +504,13 @@
             .titulos {
                 color: propiedades.$textos-especiais;
                 font-family: "Poppins-Regular", Helvetica, sans-serif;
-                font-size: 1.5vw;
+                font-size: 2.2vw;
                 margin: 10px 0;
                 text-align: center;
+            }
+
+            #Noticias {
+                margin-bottom: 4vh;
             }
 
             &__navegação,
