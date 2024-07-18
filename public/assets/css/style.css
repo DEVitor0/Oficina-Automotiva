@@ -48,13 +48,16 @@
   cursor: pointer;
   color: #FFFFFF;
   font-size: 18px;
-  transition: 0.2s ease-in;
 }
 @font-face {
   font-family: "Roboto-Light";
   src: url("../../../src/assets/font/Roboto/Roboto-Light.ttf");
 }
+#header .header__nav .nav__item .nav__item-container ul li {
+  z-index: 2000;
+}
 #header .header__nav .nav__item .nav__item-container ul li:hover {
+  transition: all 0.2s ease-in;
   color: #FFFB38;
 }
 #header #header__destaque {
@@ -436,4 +439,139 @@
   border-radius: 100%;
   background-color: #97989b;
   cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3C3C3C;
+}
+.footer__elementos {
+  width: inherit;
+  height: auto;
+  margin: 4vh 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__elementos__garage {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.footer__elementos__garage__imagem img {
+  filter: grayscale(1);
+}
+.footer__elementos__garage__texto {
+  margin: 20px 0;
+  color: #FFFFFF;
+  width: 320px;
+  font-family: "Poppins-Light", Helvetica, sans-serif;
+  text-align: justify;
+}
+.footer__elementos__garage__social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.footer__elementos__garage__social i {
+  color: #FFFFFF;
+  font-size: 2vw;
+}
+.footer__elementos__garage__social .fa-facebook-f {
+  font-size: 1.6vw;
+}
+.footer__elementos .titulos, .footer__elementos .footer__elementos__navegação > p:first-child, .footer__elementos .footer__elementos__novidades > p:first-child {
+  color: #FFFFFF;
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  font-size: 1.5vw;
+  margin: 10px 0;
+  text-align: center;
+}
+.footer__elementos__navegação ul, .footer__elementos__novidades ul {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 21px;
+}
+.footer__elementos__navegação ul li, .footer__elementos__novidades ul li {
+  color: #FFFFFF;
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.footer__elementos__navegação ul li:hover, .footer__elementos__novidades ul li:hover {
+  text-decoration: underline;
+}
+.footer__elementos__navegação > p:first-child, .footer__elementos__novidades > p:first-child {
+  text-align: left !important;
+}
+.footer__elementos__navegação input[type=text], .footer__elementos__novidades input[type=text] {
+  width: 100%;
+  padding: 10px;
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  font-size: 1vw;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.footer__elementos__navegação input[type=text]:focus, .footer__elementos__novidades input[type=text]:focus {
+  outline: none;
+}
+.footer__elementos__navegação button, .footer__elementos__novidades button {
+  border-radius: 30px;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Poppins-Light", Helvetica, sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  width: 80px;
+  margin: 20px 0 10px;
+}
+.footer__elementos__navegação button:hover, .footer__elementos__novidades button:hover {
+  transition: all 0.3s ease-in;
+  border: none;
+  background-color: #009688;
+  color: white;
+}
+.footer__elementos__navegação p:last-of-type, .footer__elementos__novidades p:last-of-type {
+  color: #FFFFFF;
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  text-align: left;
+  margin-bottom: 1vw;
+}
+.footer__elementos__agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__elementos__agenda > div .footer__elementos__agenda__horarios {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__elementos__agenda > div .footer__elementos__agenda__horarios p {
+  color: #FFFFFF;
+  font-family: "Poppins-Regular", Helvetica, sans-serif;
+  margin: 0;
+  text-align: right;
+}
+.footer__elementos__agenda > div .footer__elementos__agenda__horarios span {
+  font-family: "Poppins-Bold", Helvetica, sans-serif;
+  margin-right: 5px;
+  color: #a09797;
+  text-align: left;
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../../../src/assets/font/Poppins/../../../assets/font/Poppins/Poppins-Bold.ttf");
 }/*# sourceMappingURL=style.css.map */

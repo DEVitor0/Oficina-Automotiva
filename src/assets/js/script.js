@@ -114,4 +114,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     atualizarCarrossel();
+
+    //Proibido cópia
+
+    const opinioesSection = document.querySelector('.sections__opiniões');
+
+    opinioesSection.addEventListener('selectstart', (event) => {
+        event.preventDefault();
+    });
 });

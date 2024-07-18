@@ -1,7 +1,7 @@
 @use "./textos";
 @use "./cores";
 
-@mixin navegaçãoItens($cor, $cor2, $tamanho) {
+@mixin navegaçãoItens($cor, $tamanho) {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,11 +12,6 @@
 
         color: $cor;
         font-size: $tamanho;
-        transition: 0.2s ease-in;
-
-        &:hover {
-            color: $cor2;
-        }
     }
 }
 
