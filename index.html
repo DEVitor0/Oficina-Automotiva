@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garage</title>
-    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="stylesheet" href="public/assets/css/notebook.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <script src="https://kit.fontawesome.com/040ec7ddb7.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./src/assets/img/icones/oficina (2).png" type="image/x-icon">
 </head>
-
 <body>
     <header id="header">
         <nav class="header__nav">
@@ -269,63 +267,46 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__elementos">
-            <div class="footer__elementos__garage">
-                <div class="footer__elementos__garage__imagem">
-                    <img src="./src/assets/img/icones/logo-1.png" alt="">
-                </div>
-                <div class="footer__elementos__garage__texto">
-                    <p>Rua Alegre, 123, Bairro das Flores, Cidade Brasileira - SP. Telefone: (12) 1234-5678. Email: garage@gmail.com Aceitamos pagamentos em cartão e dinheiro</p>
-                </div>
-                <div class="footer__elementos__garage__social">
-                    <div class="footer__elementos__garage__icones"><i class="fa-brands fa-whatsapp"></i></div>
-                    <div class="footer__elementos__garage__icones"><i class="fa-brands fa-instagram"></i></div>
-                    <div class="footer__elementos__garage__icones"><i class="fa-brands fa-facebook-f"></i></div>
-                </div>
+        <div class="footer__contact">
+            <div class="footer__contact-info">
+                <i class="fa-regular fa-envelope"></i>
+                <p class="footer__contact-text">INSCREVA-SE PARA MAIS NOVIDADES</p>
             </div>
-            <div class="footer__elementos__agenda">
-                <p class="titulos">Horários</p>
-                <div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Dom: </span><p>07:30 - 18:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Seg: </span><p>07:30 - 21:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Ter: </span><p>07:30 - 21:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Qua: </span><p>07:30 - 21:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Qui: </span><p>07:30 - 21:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Sex: </span><p>07:30 - 21:00</p>
-                    </div>
-                    <div class="footer__elementos__agenda__horarios">
-                        <span>Sáb: </span><p>07:30 - 18:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__elementos__navegação">
-                <p class="titulos">Navegação</p>
-                <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>Galeria</li>
-                    <li>Serviço</li>
-                    <li>Contato</li>
-                </ul>
-            </div>
-            <div class="footer__elementos__novidades">
-                <p id="Noticias">Notícias</p>
-                <input type="text" placeholder="Seu email">
-                <button>Enviar</button>
-                <p>Inscreva-se para novidades!</p>
+            <div class="footer__contact-form">
+                <input class="footer__contact-input" type="text" placeholder="Insira Seu Email Aqui">
+                <button class="footer__contact-button">Enviar</button>
             </div>
         </div>
+        <div class="footer__main">
+            <div class="footer__container">
+                <div class="footer__section footer__section--links">
+                    <h2 class="footer__section-title">Links Rápidos</h2>
+                    <ul class="footer__section-list">
+                        <li class="footer__section-item"><a class="footer__section-link" href="#">Home</a></li>
+                        <li class="footer__section-item"><a class="footer__section-link" href="#">Promoções</a></li>
+                        <li class="footer__section-item"><a class="footer__section-link" href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section footer__section--contact">
+                    <h2 class="footer__section-title">Contato</h2>
+                    <p class="footer__contact-address"><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123, Cidade, País</p>
+                    <p class="footer__contact-phone"><i class="fas fa-phone"></i> +55 123 456 7890</p>
+                    <p class="footer__contact-email"><i class="fas fa-envelope"></i> garage@veiculo.com</p>
+                </div>
+                <div class="footer__section footer__section--social">
+                    <h2 class="footer__section-title">Redes Sociais</h2>
+                    <div class="footer__social-icons">
+                        <a class="footer__social-icon" href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="footer__social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="footer__social-icon" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="footer__social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                &copy; 2024 Garage | Todos os direitos reservados.
+            </div>
+        </div>           
     </footer>    
     <script src="./public/assets/js/bundle.js"></script>
 </body>

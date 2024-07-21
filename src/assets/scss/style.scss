@@ -448,144 +448,141 @@
         
     }
 
-    .footer {
+    .footer__section-title {
+        font-family: 'Poppins-Light', Helvetica, sans-serif;
+        font-size: 1.6vw;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .footer__contact {
         width: 100%;
         height: auto;
-        @include propiedades.flexContainer(center, center);
-        background-color: #3C3C3C;
-
-        &__elementos {
-            width: inherit;
-            height: auto;
-            margin: 4vh 0;
-            @include propiedades.flexContainer(space-around, center);
-
-            &__garage {
-                display: flex;
-                flex-direction: column;
-                align-items: left;
-                justify-content: center;
-
-                &__imagem img {
-                    filter: grayscale(1);
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    
+        > .footer__contact-info {
+            &:first-child {
+                > i {
+                    font-size: 1.5vw;
+                    padding-right: 5px;
                 }
-
-                &__texto {
-                    margin: 20px 0;
-                    color: propiedades.$textos-especiais;
-                    width: 320px;
-                    font-family: "Poppins-Light", Helvetica, sans-serif;
-                    text-align: justify;
-                }
-
-                &__social {
-                    @include propiedades.flexContainer(flex-start, center);
-                    gap: 20px;
-
-                    i {
-                        color: propiedades.$textos-especiais;
-                        font-size: 2vw;
-                    }
-
-                    .fa-facebook-f {
-                        font-size: 1.6vw;
-                    }
+    
+                > .footer__contact-text {
+                    @extend .footer__section-title;
+                    display: inline;
                 }
             }
+        }
 
-            .titulos {
+        .footer__contact-form {
+            .footer__contact-input {
+                border: none;
+                font-size: 18px;
+                padding: 5px;
+                border-radius: 5px;
+                background-color: transparent;
+                caret-color: white;
                 color: propiedades.$textos-especiais;
-                font-family: "Poppins-Regular", Helvetica, sans-serif;
-                font-size: 1.5vw;
-                margin: 10px 0;
-                text-align: center;
+
+                &:focus {
+                    outline: none;
+                }
+
             }
 
-            &__navegação,
-            &__novidades {
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    padding-bottom: 21px;
+            > .footer__contact-button {
+                @include propiedades.botões();
+                width: 4vw;
+                border: 1px solid white;
+                color: white;
+                padding: 5px;
+            }
+        }
+    }
+    
+    .footer {
+        padding-top: 20px;
+        color: propiedades.$textos-especiais !important;
+        background-color: #3C3C3C;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include propiedades.flexContainer(center, center);
+    }
+    
+    .footer__container {
+        border-top: 1px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
 
-                    li {
-                        color: propiedades.$textos-especiais;
-                        font-family: "Poppins-Regular", Helvetica, sans-serif;
-                        margin: 5px 0;
-                        cursor: pointer;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-
-                >p:first-child {
-                    @extend .titulos;
-                    text-align: left !important;
-                }
-
-                input[type="text"] {
-                    width: 100%;
-                    padding: 10px;
-                    font-family: "Poppins-Regular", Helvetica, sans-serif;
-                    font-size: 1vw;
-                    border: none;
-                    background-color: transparent;
-                    border-bottom: 1px solid white;
-                    color: white;
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-
-                button {
-                    @include propiedades.botões();
-                    border: 1px solid white;
-                    color: white;
-                    padding: 5px;
-                    width: 80px;
-                    margin: 20px 0 10px;
-                }
-
-                p:last-of-type {
+    .footer__main {
+        width: 75%;
+    }
+    
+    .footer__section {
+        min-width: 21%;
+        margin: 20px;
+    
+        p {
+            font-family: "Poppins-Light", Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+            list-style: none;
+            padding: 0;
+    
+            li {
+                font-family: 'Poppins-Light', Helvetica, sans-serif;
+                margin-bottom: 10px;
+    
+                a {
                     color: propiedades.$textos-especiais;
-                    font-family: "Poppins-Regular", Helvetica, sans-serif;
-                    text-align: left;
-                    margin-bottom: 1vw;
-                }
-            }
-
-            &__agenda {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                >div {
-
-                    .footer__elementos__agenda__horarios {
-                        display: flex;
-                        justify-content: space-between;
-
-                        p {
-                            color: propiedades.$textos-especiais;
-                            font-family: "Poppins-Regular", Helvetica, sans-serif;
-                            margin: 0;
-                            text-align: right;
-                        }
-
-                        span {
-                            @include propiedades.poppins("../../../assets/font/Poppins/Poppins-Bold.ttf", "Bold");
-                            font-family: "Poppins-Bold", Helvetica, sans-serif;
-                            margin-right: 5px;
-                            color: #a09797;
-                            text-align: left;
-                        }
+                    text-decoration: none;
+    
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
             }
         }
+
+        .footer__social-icons {
+            @include propiedades.flexContainer(flex-start, center);
+            gap: 20px;
+
+            .footer__social-icon {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5vw;
+
+                &:hover {
+                    color: #97989b;
+                }
+            }
+        }
+    
     }
+    
+    .footer__bottom {
+        text-align: center;
+        padding: 20px 0;
+    
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+    
 }
