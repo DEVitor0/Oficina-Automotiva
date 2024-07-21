@@ -1,6 +1,5 @@
 @use "../propiedades";
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     *,
     *::before,
     *::after {
@@ -11,7 +10,7 @@
 
     #header {
         height: 38vw;
-        min-height: 420px;
+        min-height: 390px;
         width: 100%;
         background-color: #17755A;
         background-image: url("../../../src/assets/img/fundos/bg1.png");
@@ -28,7 +27,7 @@
             padding: 20px;
 
             .nav__item {
-                width: 80%;
+                width: 90%;
                 @include propiedades.flexContainer(space-between, center);
                 flex-direction: row;
 
@@ -116,13 +115,14 @@
             @include propiedades.flexContainer(flex-end, center);
 
             .header__extra-elementos {
-                width: 53%;
-                @include propiedades.flexContainer(flex-start, center);
+                width: 78%;
+                @include propiedades.flexContainer(flex-end, center);
                 flex-direction: row;
                 margin-bottom: 30px;
-                gap: 100px;
+                gap: 40px;
 
                 p {
+                    width: 13.2vw;
                     @include propiedades.roboto("Roboto-Bold.ttf", "Bold");
                     font-family: "Roboto-Bold", Helvetica, sans-serif;
                     text-transform: uppercase;
@@ -149,6 +149,10 @@
             margin-bottom: 0;
         }
 
+        &:nth-child(3) {
+            gap: 2vw;
+        }
+
         .section__titulos {
             width: 100%;
             margin-bottom: 20px;
@@ -164,15 +168,15 @@
         }
 
         .sections__pop-up {
-            width: 40%;
+            width: 47%;
             height: auto;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.158);
             background-color: white;
-            padding: 40px;
+            padding: 20px;
             z-index: 15;
             position: relative;
             top: -8.5vw;
-            margin-left: 5vw;
+            margin-left: 2vw;
 
 
             .sections__pop-up__caixas {
@@ -219,7 +223,7 @@
         .sections__container-video {
             width: 40vw;
             max-width: 600px;
-            min-width: 300px;
+            min-width: 360px;
             margin: 0 auto;
             padding: 10px;
             position: relative;
@@ -249,15 +253,23 @@
         }
 
         .sections__container-serviços {
-            width: 89.7%;
+            width: 100%;
             height: auto;
+
+            .section__titulos__subtitulo {
+                margin-left: 3.6vw;
+            }
+
+            .section__titulos h2 {
+                margin-left: 3.4vw;
+            }
 
             .sections__container-serviços__agrupador {
                 width: 100%;
                 height: auto;
-                @include propiedades.flexContainer(flex-start, flex-start);
+                @include propiedades.flexContainer(center, flex-start);
                 flex-wrap: wrap;
-                gap: 40px;
+                gap: 10px;
 
                 .sections__container-serviços__agrupador__textos {
                     width: 30%;
@@ -277,10 +289,10 @@
             }
         }
 
+
         .sections__posters {
-            width: 19vw;
-            height: 32vw;
-            margin-right: 30px;
+            width: 26vw;
+            height: 47vw;
             background-size: cover;
         }
 
@@ -289,7 +301,7 @@
         }
 
         .sections__posters:nth-child(2) {
-            width: 25vw;
+            width: 36vw;
             background-image: url("../../../src/assets/img/carros/modelo2.png");
         }
 
@@ -445,8 +457,8 @@
                 gap: 10px;
 
                 .sections__opiniões__navegação__pontos {
-                    width: 1vw;
-                    height: 1vw;
+                    width: 1.3vw;
+                    height: 1.3vw;
                     border-radius: 100%;
                     background-color: #97989b;
                     cursor: pointer;
@@ -458,7 +470,7 @@
 
     .footer__section-title {
         font-family: 'Poppins-Light', Helvetica, sans-serif;
-        font-size: 2.1vw;
+        font-size: 1.2em;
         margin-bottom: 20px;
         font-weight: bold;
     }
@@ -475,7 +487,7 @@
         > .footer__contact-info {
             &:first-child {
                 > i {
-                    font-size: 2vw;
+                    font-size: 3vw;
                     padding-right: 5px;
                 }
     
@@ -574,7 +586,7 @@
             .footer__social-icon {
                 color: white;
                 text-decoration: none;
-                font-size: 2.3vw;
+                font-size: 2.9vw;
 
                 &:hover {
                     color: #97989b;

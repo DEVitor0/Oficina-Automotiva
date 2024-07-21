@@ -346,7 +346,10 @@
         }
 
         .sections__opiniões {
-            width: 65%;
+            @media screen and (max-width: 1500px){
+                width: 85%;
+            }
+            width: 75%;
             height: auto;
             @include propiedades.flexContainer(center, flex-start);
             flex-direction: column;
@@ -496,10 +499,11 @@
 
             > .footer__contact-button {
                 @include propiedades.botões();
-                width: 4vw;
+                width: 6vw;
                 border: 1px solid white;
                 color: white;
                 padding: 5px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -524,7 +528,7 @@
     }
 
     .footer__main {
-        width: 75%;
+        width: 80%;
     }
     
     .footer__section {
