@@ -12,6 +12,16 @@
 
         color: $cor;
         font-size: $tamanho;
+
+        a {
+            color: $cor;
+            text-decoration: none;
+            margin-bottom: 8px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 

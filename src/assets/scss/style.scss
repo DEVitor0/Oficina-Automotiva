@@ -312,6 +312,10 @@
                     background-position: center;
                 }
 
+                .sections__galeria__layout-itens--especial {
+                    display: none;
+                }
+
                 .sections__galeria__layout-itens:nth-child(1) {
                     grid-column: span 2;
                     width: 44.4vw;
@@ -331,15 +335,15 @@
                     background-position: bottom;
                 }
 
-                .sections__galeria__layout-itens:nth-child(4) {
+                .sections__galeria__layout-itens:nth-child(5) {
                     background-image: url("../../../src/assets/img/carros/poster4.jpg");
                 }
 
-                .sections__galeria__layout-itens:nth-child(5) {
+                .sections__galeria__layout-itens:nth-child(6) {
                     background-image: url("../../../src/assets/img/carros/poster5.jpg");
                 }
 
-                .sections__galeria__layout-itens:nth-child(6) {
+                .sections__galeria__layout-itens:nth-child(7) {
                     background-image: url("../../../src/assets/img/carros/poster6.jpg");
                 }
             }
@@ -466,6 +470,7 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: row;
+        margin-bottom: 10px;
     
         > .footer__contact-info {
             &:first-child {
@@ -503,7 +508,6 @@
                 border: 1px solid white;
                 color: white;
                 padding: 5px;
-                margin-bottom: 10px;
             }
         }
     }
@@ -582,11 +586,9 @@
     .footer__bottom {
         text-align: center;
         padding: 20px 0;
-    
-        p {
-            margin: 0;
-            font-size: 14px;
-        }
+        font-family: "Poppins-Light", Helvetica, sans-serif;
+        margin: 0;
+        font-size: 14px;
     }
     
 }
