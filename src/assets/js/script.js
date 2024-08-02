@@ -135,4 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
     opinioesSection.addEventListener('selectstart', (event) => {
         event.preventDefault();
     });
+
+    const hamburger = document.querySelector('.nav__hamburger');
+    const menu = document.getElementById('nav__menu');
+
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('open');
+        menu.classList.toggle('open');
+    });
+
 });

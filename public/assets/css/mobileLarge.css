@@ -1,1 +1,630 @@
-@media only screen and (min-width: 600px)and (max-width: 767px){*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}#header{height:38vw;min-height:330px;width:100%;background-color:#17755a;background-image:url("../../../src/assets/img/fundos/bg1.png");background-size:cover;display:flex;justify-content:space-between;align-items:center;flex-direction:column;position:relative;z-index:1}#header .header__nav{width:inherit;display:flex;justify-content:center;align-items:center;flex-direction:row;padding:20px}#header .header__nav .nav__item{width:100%;display:flex;justify-content:space-between;align-items:center;flex-direction:row}#header .header__nav .nav__item .nav__item-container ul{display:flex;justify-content:space-around;align-items:center;gap:5vw}#header .header__nav .nav__item .nav__item-container ul li{list-style-type:none;font-family:"Roboto-Light",Helvetica,sans-serif;cursor:pointer;color:#fff;font-size:18px}@font-face{font-family:"Roboto-Light";src:url("../../../src/assets/font/Roboto/Roboto-Light.ttf")}#header .header__nav .nav__item .nav__item-container ul li a{color:#fff;text-decoration:none;margin-bottom:8px}#header .header__nav .nav__item .nav__item-container ul li a:hover{text-decoration:underline}#header .header__nav .nav__item .nav__item-container ul li{z-index:2000}#header .header__nav .nav__item .nav__item-container ul li:hover{transition:all .2s ease-in;color:#fffb38}#header #header__destaque{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;flex-direction:column;width:100%;margin-bottom:4vh}#header #header__destaque h1{text-transform:uppercase;font-family:"Roboto-Black";font-size:12vw;font-style:italic;text-decoration:underline;color:#fff;position:relative;z-index:1;text-align:center;transform:translateY(-20px)}@font-face{font-family:"Roboto-Black";src:url("../../../src/assets/font/Roboto/Roboto-Black.ttf")}#header #header__destaque .header__destaque__imagens{width:100%;height:40vw;display:flex;justify-content:center;align-items:center;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:2}#header #header__destaque .header__destaque__imagens div{width:inherit;height:inherit;background-size:cover}#header #header__destaque .header__destaque__imagens #header__destaque__imagens-item{background-image:url("../../../src/assets/img/carros/bg-1-1.png");position:absolute;width:100%;height:100%;top:50%;left:50%;transform:translate(-50%, -50%);z-index:3}#header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças{width:100%;height:40vw;position:absolute;top:0;left:0;background-image:url("../../../src/assets/img/fundos/bg-2.png");background-attachment:scroll;background-size:cover;z-index:2}#header .header__extra{width:100%;display:flex;justify-content:flex-end;align-items:center}#header .header__extra .header__extra-elementos{width:70%;display:flex;justify-content:space-around;align-items:center;flex-direction:row;margin-bottom:15px}#header .header__extra .header__extra-elementos p{width:13.2vw;font-family:"Roboto-Bold",Helvetica,sans-serif;text-transform:uppercase;font-style:italic;font-size:16px;color:#fff}@font-face{font-family:"Roboto-Bold";src:url("../../../src/assets/font/Roboto/Roboto-Bold.ttf")}#header .header__extra .header__extra-elementos i{color:#fffb38;margin-left:6px}.sections{width:100%;height:auto;display:flex;justify-content:center;align-items:center;margin-bottom:8vh}.sections:first-child{margin-bottom:0;flex-direction:column}.sections:nth-child(3){gap:2vw}.sections .section__titulos{width:100%;margin-bottom:20px}.sections .section__titulos .section__titulos__subtitulo{font-family:"Poppins-Light",Helvetica,sans-serif;font-size:16px;color:#737373}@font-face{font-family:"Poppins-Light";src:url("../../../src/assets/font/Poppins/Poppins-Light.ttf")}.sections .section__titulos h2,.sections .section__titulos .footer__contact-info>p{font-weight:normal;font-family:"Poppins-Regular";font-size:32px;color:#3c3c3c}@font-face{font-family:"Poppins-Regular";src:url("../../../src/assets/font/Poppins/Poppins-Regular.ttf")}.sections .section__titulos h2 span,.sections .section__titulos .footer__contact-info>p span{color:#009688;font-size:inherit;margin-right:5px;font-weight:700}.sections .sections__pop-up{width:90%;height:auto;box-shadow:0 4px 6px rgba(0,0,0,.1),0 10px 20px rgba(0,0,0,.158);background-color:#fff;padding:20px;z-index:15;margin-left:2vw;margin-top:20px}.sections .sections__pop-up .sections__pop-up__caixas{width:100%}.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos{width:100%;padding:10px;border:1px solid #ededed;display:flex;justify-content:space-between;align-items:center;flex-direction:row;margin-bottom:20px;cursor:pointer}.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos p{font-family:"Poppins-SemiBold",Helvetica,sans-serif}@font-face{font-family:"Poppins-SemiBold";src:url("../../../src/assets/font/Poppins/Poppins-SemiBold.ttf")}.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos{width:100%;margin:10px 0;font-family:"Poppins-Light",Helvetica,sans-serif;text-align:justify;max-height:0;overflow:hidden;transition:max-height .3s ease-out,padding .3s ease-out}.sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos.open{max-height:200px;padding:10px 0}.sections .sections__pop-up button{border:1px solid #000;width:120px;border-radius:30px;background-color:rgba(0,0,0,0);padding:10px;font-size:16px;font-family:"Poppins-Light",Helvetica,sans-serif;font-weight:300;cursor:pointer}.sections .sections__pop-up button:hover{transition:all .3s ease-in;border:none;background-color:#009688;color:#fff}.sections .sections__container-video{width:90%;max-width:600px;min-width:360px;margin:20px auto;padding:10px;position:relative;left:5px;box-shadow:0 8px 16px rgba(0,0,0,.2);border-radius:10px;overflow:hidden;background-color:#f8f9fa}.sections .sections__container-video .sections__container-video__capa{position:relative;width:100%;padding-top:53.25%;z-index:200;overflow:hidden;border-radius:10px}.sections .sections__container-video .sections__container-video__capa iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:10px}.sections .sections__container-serviços{width:100%;height:auto}.sections .sections__container-serviços .section__titulos__subtitulo{margin-left:3.6vw}.sections .sections__container-serviços .section__titulos h2,.sections .sections__container-serviços .section__titulos .footer__contact-info>p{margin-left:3.4vw}.sections .sections__container-serviços .sections__container-serviços__agrupador{width:100%;height:auto;display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:10px}.sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos{width:30%;height:auto}.sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos h3{font-family:"Poppins-SemiBold",Helvetica,sans-serif;margin-bottom:10px}.sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos p{font-family:"Poppins-Light",Helvetica,sans-serif;text-align:justify;margin-right:20px}.sections .sections__posters{width:26vw;height:47vw;background-size:cover}.sections .sections__posters:first-child{background-image:url("../../../src/assets/img/carros/modelo1.png")}.sections .sections__posters:nth-child(2){width:36vw;background-image:url("../../../src/assets/img/carros/modelo2.png")}.sections .sections__posters:last-child{background-image:url("../../../src/assets/img/carros/modelo3.png")}.sections .sections__galeria{width:91.7%;height:auto}.sections .sections__galeria .sections__galeria__layout{width:100%;height:auto;display:grid;grid-template-columns:repeat(3, 1fr);grid-template-rows:auto auto auto;gap:10px}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens{width:100%;height:23vw;background-size:cover;background-position:center}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(1){grid-column:span 2;background-image:url("../../../src/assets/img/carros/poster1.jpg")}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(2){grid-column:3/4;background-image:url("../../../src/assets/img/carros/poster2.jpg")}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(3){grid-column:2/2;grid-row:2/2;background-image:url("../../../src/assets/img/carros/poster4.jpg")}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(4){background-image:url("../../../../src/assets/img/carros/posterPerdido.jpg");background-position:center}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(5){grid-column:3/4;grid-row:2/4;height:calc(46vw + 10px);background-image:url("../../../src/assets/img/carros/poster3.jpg");background-position:bottom}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(6){grid-column:1/2;grid-row:3/4;background-image:url("../../../src/assets/img/carros/poster5.jpg")}.sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(7){grid-column:2/3;grid-row:3/4;background-image:url("../../../src/assets/img/carros/poster6.jpg")}.sections .sections__opiniões{width:90%;height:auto;display:flex;justify-content:center;align-items:flex-start;flex-direction:column}.sections .sections__opiniões .sections__opiniões__gerenciador{display:flex;justify-content:center;align-items:center;gap:30px;overflow:hidden;position:relative}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens{width:50%;height:inherit;display:flex;justify-content:flex-start;align-items:flex-start;flex-direction:row;gap:10px;opacity:0;transition:opacity .5s ease-in-out;display:none}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.ativo{opacity:1;display:flex}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-enter{opacity:0}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-enter-active{opacity:1;transition:opacity .5s ease-in-out}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-exit{opacity:1}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-exit-active{opacity:0;transition:opacity .5s ease-in-out}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas{display:flex;align-items:flex-start}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas span{font-size:10vw;font-family:"aspas",Helvetica,sans-serif;color:#97989b}@font-face{font-family:"aspas";src:url("../../../src/assets/font/Coustard/Coustard-Regular.ttf")}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos{font-family:"nunito-light",Helvetica,sans-serif;text-align:justify}@font-face{font-family:"nunito-light";src:url("../../../src/assets/font/Nunito/Nunito-Light.ttf")}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__nome{margin-top:10px;font-weight:bold;font-size:1.1em}.sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__status{color:#636464;font-size:1em;margin-left:1px}.sections .sections__opiniões .sections__opiniões__navegação{width:100%;height:auto;display:flex;justify-content:center;align-items:center;gap:10px}.sections .sections__opiniões .sections__opiniões__navegação .sections__opiniões__navegação__pontos{width:1.7vw;height:1.7vw;border-radius:100%;background-color:#97989b;cursor:pointer}.footer{padding-top:20px;background-color:#3c3c3c;color:#fff}.footer h2,.footer .footer__contact-info>p{display:inline-block;text-align:center;font-size:20px;font-family:"Poppins-Light",Helvetica,sans-serif;font-weight:bold}.footer__contact{width:95%;margin:0 auto;height:auto;padding-bottom:10px;margin-top:5vh;display:flex;justify-content:space-evenly;align-items:center;flex-direction:row;border-bottom:1px solid #fff}.footer__contact-info{display:flex}.footer__contact-info>i{display:none}.footer__contact-form .footer__contact-input[type=text]{border:none;font-size:18px;width:69%;margin-left:10px;background-color:rgba(0,0,0,0);color:#fff}.footer__contact-form .footer__contact-input[type=text]:focus{outline:none}.footer__contact-form .footer__contact-button{border-radius:30px;background-color:rgba(0,0,0,0);padding:10px;font-size:16px;font-family:"Poppins-Light",Helvetica,sans-serif;font-weight:300;cursor:pointer;width:10vw;border:1px solid #fff;color:#fff;padding:2px;border-radius:5px}.footer__contact-form .footer__contact-button:hover{transition:all .3s ease-in;border:none;background-color:#009688;color:#fff}.footer__main .footer__container{display:flex;flex-wrap:wrap;justify-content:space-around;margin:0 auto;max-width:97vw}.footer__main .footer__container .footer__section{flex:1;min-width:250px;margin:20px}.footer__main .footer__container .footer__section-title{margin-bottom:10px}.footer__main .footer__container .footer__section-list{display:flex;justify-content:space-around;align-items:center;flex-direction:column;align-items:flex-start}.footer__main .footer__container .footer__section-list li{list-style-type:none;font-family:"Roboto-Light",Helvetica,sans-serif;cursor:pointer;color:#fff;font-size:1.2em}@font-face{font-family:"Roboto-Light";src:url("../../../src/assets/font/Roboto/Roboto-Light.ttf")}.footer__main .footer__container .footer__section-list li a{color:#fff;text-decoration:none;margin-bottom:8px}.footer__main .footer__container .footer__section-list li a:hover{text-decoration:underline}.footer__main .footer__container .footer__section-address,.footer__main .footer__container .footer__section-phone,.footer__main .footer__container .footer__section-email{font-size:16px;line-height:1.6}.footer__main .footer__container .footer__section--contact p{font-family:"Poppins-Light",Helvetica,sans-serif}.footer .footer__section--social h2,.footer .footer__section--social .footer__contact-info>p{text-align:center;width:100%;font-size:24px}.footer .footer__section--social .footer__social-icons{display:flex;justify-content:center;align-items:center;gap:15px;width:100%}.footer .footer__section--social .footer__social-icons .footer__social-icon{color:#fff;font-size:4.5vw;text-decoration:none}.footer .footer__section--social .footer__social-icons .footer__social-icon:hover{color:#97989b}.footer__bottom{text-align:center;padding:20px 0;font-family:"Poppins-Light",Helvetica,sans-serif;margin:0;font-size:14px}}/*# sourceMappingURL=mobileLarge.css.map */
+@charset "UTF-8";
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  #header {
+    height: 38vw;
+    min-height: 330px;
+    width: 100%;
+    background-color: #17755A;
+    background-image: url("../../../src/assets/img/fundos/bg1.png");
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+  #header .menu__header, #header li > i, #header .nav__hamburger {
+    display: none;
+  }
+  #header .header__nav {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+  }
+  #header .header__nav .nav__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  #header .header__nav .nav__item .nav__item-container ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vw;
+  }
+  #header .header__nav .nav__item .nav__item-container ul li {
+    list-style-type: none;
+    font-family: "Roboto-Light", Helvetica, sans-serif;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  @font-face {
+    font-family: "Roboto-Light";
+    src: url("../../../src/assets/font/Roboto/Roboto-Light.ttf");
+  }
+  #header .header__nav .nav__item .nav__item-container ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  #header .header__nav .nav__item .nav__item-container ul li a:hover {
+    text-decoration: underline;
+  }
+  #header .header__nav .nav__item .nav__item-container ul li {
+    z-index: 2000;
+  }
+  #header .header__nav .nav__item .nav__item-container ul li:hover {
+    transition: all 0.2s ease-in;
+    color: #FFFB38;
+  }
+  #header #header__destaque {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 4vh;
+  }
+  #header #header__destaque h1 {
+    text-transform: uppercase;
+    font-family: "Roboto-Black";
+    font-size: 12vw;
+    font-style: italic;
+    text-decoration: underline;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    transform: translateY(-20px);
+  }
+  @font-face {
+    font-family: "Roboto-Black";
+    src: url("../../../src/assets/font/Roboto/Roboto-Black.ttf");
+  }
+  #header #header__destaque .header__destaque__imagens {
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  #header #header__destaque .header__destaque__imagens div {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+  }
+  #header #header__destaque .header__destaque__imagens #header__destaque__imagens-item {
+    background-image: url("../../../src/assets/img/carros/bg-1-1.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  #header #header__destaque .header__destaque__imagens .header__destaque__imagens-Fumaças {
+    width: 100%;
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../../src/assets/img/fundos/bg-2.png");
+    background-attachment: scroll;
+    background-size: cover;
+    z-index: 2;
+  }
+  #header .header__extra {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #header .header__extra .header__extra-elementos {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 15px;
+  }
+  #header .header__extra .header__extra-elementos p {
+    width: 13.2vw;
+    font-family: "Roboto-Bold", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: url("../../../src/assets/font/Roboto/Roboto-Bold.ttf");
+  }
+  #header .header__extra .header__extra-elementos i {
+    color: #FFFB38;
+    margin-left: 6px;
+  }
+  .sections {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vh;
+  }
+  .sections:first-child {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+  .sections:nth-child(3) {
+    gap: 2vw;
+  }
+  .sections .section__titulos {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sections .section__titulos .section__titulos__subtitulo {
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    font-size: 16px;
+    color: #737373;
+  }
+  @font-face {
+    font-family: "Poppins-Light";
+    src: url("../../../src/assets/font/Poppins/Poppins-Light.ttf");
+  }
+  .sections .section__titulos h2, .sections .section__titulos .footer__contact-info > p {
+    font-weight: normal;
+    font-family: "Poppins-Regular";
+    font-size: 32px;
+    color: #3C3C3C;
+  }
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url("../../../src/assets/font/Poppins/Poppins-Regular.ttf");
+  }
+  .sections .section__titulos h2 span, .sections .section__titulos .footer__contact-info > p span {
+    color: #177559;
+    font-size: inherit;
+    margin-right: 5px;
+    font-weight: 700;
+  }
+  .sections .sections__pop-up {
+    width: 90%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.158);
+    background-color: white;
+    padding: 20px;
+    z-index: 15;
+    margin-left: 2vw;
+    margin-top: 20px;
+  }
+  .sections .sections__pop-up .sections__pop-up__caixas {
+    width: 100%;
+  }
+  .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #EDEDED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__titulos p {
+    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+  }
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../../../src/assets/font/Poppins/Poppins-SemiBold.ttf");
+  }
+  .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos {
+    width: 100%;
+    margin: 10px 0;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    text-align: justify;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  }
+  .sections .sections__pop-up .sections__pop-up__caixas .sections__pop-up__caixas__textos.open {
+    max-height: 200px;
+    padding: 10px 0;
+  }
+  .sections .sections__pop-up button {
+    border: 1px solid black;
+    width: 120px;
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .sections .sections__pop-up button:hover {
+    transition: all 0.3s ease-in;
+    border: none;
+    background-color: #177559;
+    color: white;
+  }
+  .sections .sections__container-video {
+    width: 90%;
+    max-width: 600px;
+    min-width: 360px;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+    left: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+  }
+  .sections .sections__container-video .sections__container-video__capa {
+    position: relative;
+    width: 100%;
+    padding-top: 53.25%;
+    z-index: 200;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .sections .sections__container-video .sections__container-video__capa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+  .sections .sections__container-serviços {
+    width: 100%;
+    height: auto;
+  }
+  .sections .sections__container-serviços .section__titulos__subtitulo {
+    margin-left: 3.6vw;
+  }
+  .sections .sections__container-serviços .section__titulos h2, .sections .sections__container-serviços .section__titulos .footer__contact-info > p {
+    margin-left: 3.4vw;
+  }
+  .sections .sections__container-serviços .sections__container-serviços__agrupador {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos {
+    width: 30%;
+    height: auto;
+  }
+  .sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos h3 {
+    font-family: "Poppins-SemiBold", Helvetica, sans-serif;
+    margin-bottom: 10px;
+  }
+  .sections .sections__container-serviços .sections__container-serviços__agrupador .sections__container-serviços__agrupador__textos p {
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    text-align: justify;
+    margin-right: 20px;
+  }
+  .sections .sections__posters {
+    width: 26vw;
+    height: 47vw;
+    background-size: cover;
+  }
+  .sections .sections__posters:first-child {
+    background-image: url("../../../src/assets/img/carros/modelo1.png");
+  }
+  .sections .sections__posters:nth-child(2) {
+    width: 36vw;
+    background-image: url("../../../src/assets/img/carros/modelo2.png");
+  }
+  .sections .sections__posters:last-child {
+    background-image: url("../../../src/assets/img/carros/modelo3.png");
+  }
+  .sections .sections__galeria {
+    width: 91.7%;
+    height: auto;
+  }
+  .sections .sections__galeria .sections__galeria__layout {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens {
+    width: 100%;
+    height: 23vw;
+    background-size: cover;
+    background-position: center;
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(1) {
+    grid-column: span 2;
+    background-image: url("../../../src/assets/img/carros/poster1.jpg");
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(2) {
+    grid-column: 3/4;
+    background-image: url("../../../src/assets/img/carros/poster2.jpg");
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(3) {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    background-image: url("../../../src/assets/img/carros/poster4.jpg");
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(4) {
+    background-image: url("../../../../src/assets/img/carros/posterPerdido.jpg");
+    background-position: center;
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(5) {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    height: calc(46vw + 10px);
+    background-image: url("../../../src/assets/img/carros/poster3.jpg");
+    background-position: bottom;
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(6) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-image: url("../../../src/assets/img/carros/poster5.jpg");
+  }
+  .sections .sections__galeria .sections__galeria__layout .sections__galeria__layout-itens:nth-child(7) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-image: url("../../../src/assets/img/carros/poster6.jpg");
+  }
+  .sections .sections__opiniões {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens {
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.ativo {
+    opacity: 1;
+    display: flex;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-enter {
+    opacity: 0;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-exit {
+    opacity: 1;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens.fade-exit-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas {
+    display: flex;
+    align-items: flex-start;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__aspas span {
+    font-size: 10vw;
+    font-family: "aspas", Helvetica, sans-serif;
+    color: #97989b;
+  }
+  @font-face {
+    font-family: "aspas";
+    src: url("../../../src/assets/font/Coustard/Coustard-Regular.ttf");
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos {
+    font-family: "nunito-light", Helvetica, sans-serif;
+    text-align: justify;
+  }
+  @font-face {
+    font-family: "nunito-light";
+    src: url("../../../src/assets/font/Nunito/Nunito-Light.ttf");
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__nome {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  .sections .sections__opiniões .sections__opiniões__gerenciador .sections__opiniões__itens .sections__opiniões__itens__textos .sections__opiniões__itens__textos__autores__status {
+    color: #636464;
+    font-size: 1em;
+    margin-left: 1px;
+  }
+  .sections .sections__opiniões .sections__opiniões__navegação {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .sections .sections__opiniões .sections__opiniões__navegação .sections__opiniões__navegação__pontos {
+    width: 1.7vw;
+    height: 1.7vw;
+    border-radius: 100%;
+    background-color: #97989b;
+    cursor: pointer;
+  }
+  .footer {
+    padding-top: 20px;
+    background-color: #3C3C3C;
+    color: #FFFFFF;
+  }
+  .footer h2, .footer .footer__contact-info > p {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .footer__contact {
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 10px;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+  }
+  .footer__contact-info {
+    display: flex;
+  }
+  .footer__contact-info > i {
+    display: none;
+  }
+  .footer__contact-form .footer__contact-input[type=text] {
+    border: none;
+    font-size: 18px;
+    width: 69%;
+    margin-left: 10px;
+    background-color: transparent;
+    color: white;
+  }
+  .footer__contact-form .footer__contact-input[type=text]:focus {
+    outline: none;
+  }
+  .footer__contact-form .footer__contact-button {
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    width: 10vw;
+    border: 1px solid white;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .footer__contact-form .footer__contact-button:hover {
+    transition: all 0.3s ease-in;
+    border: none;
+    background-color: #177559;
+    color: white;
+  }
+  .footer__main .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 97vw;
+  }
+  .footer__main .footer__container .footer__section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  }
+  .footer__main .footer__container .footer__section-title {
+    margin-bottom: 10px;
+  }
+  .footer__main .footer__container .footer__section-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__main .footer__container .footer__section-list li {
+    list-style-type: none;
+    font-family: "Roboto-Light", Helvetica, sans-serif;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 1.2em;
+  }
+  @font-face {
+    font-family: "Roboto-Light";
+    src: url("../../../src/assets/font/Roboto/Roboto-Light.ttf");
+  }
+  .footer__main .footer__container .footer__section-list li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  .footer__main .footer__container .footer__section-list li a:hover {
+    text-decoration: underline;
+  }
+  .footer__main .footer__container .footer__section-address, .footer__main .footer__container .footer__section-phone, .footer__main .footer__container .footer__section-email {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .footer__main .footer__container .footer__section--contact p {
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+  }
+  .footer .footer__section--social h2, .footer .footer__section--social .footer__contact-info > p {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+  }
+  .footer .footer__section--social .footer__social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  .footer .footer__section--social .footer__social-icons .footer__social-icon {
+    color: white;
+    font-size: 4.5vw;
+    text-decoration: none;
+  }
+  .footer .footer__section--social .footer__social-icons .footer__social-icon:hover {
+    color: #97989b;
+  }
+  .footer__bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Poppins-Light", Helvetica, sans-serif;
+    margin: 0;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=mobileLarge.css.map */
