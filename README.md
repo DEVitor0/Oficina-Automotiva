@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido para testar meus conhecimentos em HTML, SCSS e JavaScript, juntamente com plugins como Webpack, ESLint e Git.
 
-Você pode visualizar o projeto [aqui](https://devitor0.github.io/Oficina-Automotiva/).
+Você pode visualizar o projeto https://devitor0.github.io/Oficina-Automotiva/.
 
 ## Tecnologias Utilizadas
 
