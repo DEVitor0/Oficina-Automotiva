@@ -2,17 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Garage</title>
-    <link rel="stylesheet" href="./public/assets/css/style.css"> <!-- Estilos gerais -->
+    <script>document.documentElement.classList.add("js")</script>
+    <meta name="description" content="Garage: tunagem, reparo, peças, diagnóstico e venda de carros. Performance e visual de pista para o seu veículo.">
+    <meta name="theme-color" content="#177559">
+    <link rel="stylesheet" href="./public/assets/css/style.css"> <!-- Estilos gerais (hero) -->
     <link rel="stylesheet" href="./public/assets/css/notebook.css"> <!-- Estilos para notebooks -->
     <link rel="stylesheet" href="./public/assets/css/tablets.css"> <!-- Estilos para tablets -->
     <link rel="stylesheet" href="./public/assets/css/mobileLarge.css"> <!-- Estilos para mobile large -->
-    <link rel="stylesheet" href="./public/assets/css/mobile.css"> 
+    <link rel="stylesheet" href="./public/assets/css/mobile.css">
+    <link rel="stylesheet" href="./public/assets/css/garage.css"> <!-- Novas seções (3D, rolagem) -->
     <script src="https://kit.fontawesome.com/040ec7ddb7.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./src/assets/img/icones/oficina (2).png" type="image/x-icon">
 </head>
 <body>
+    <canvas id="g-stage" aria-hidden="true"></canvas>
+    <div class="g-marker" id="g-marker" aria-hidden="true"><span class="g-marker__dot"></span><span class="g-marker__label" id="g-marker-label"></span></div>
+    <aside class="g-hud" id="g-hud" aria-hidden="true">
+        <span class="g-hud__gear" id="g-gear">1</span>
+        <span class="g-hud__meta"><span id="g-hud-name">Sobre nós</span><i class="g-hud__bar"><b id="g-hud-fill"></b></i></span>
+    </aside>
     <header id="header">
         <nav class="header__nav">
             <div class="nav__item">
@@ -30,11 +40,11 @@
                             <span>Menu</span>
                         </div>
                         <ul>
-                            <li><i class="fa fa-home"></i> Home</li>
-                            <li><i class="fa fa-info"></i> Sobre</li>
-                            <li><i class="fa fa-image"></i> Galeria</li>
-                            <li><i class="fa fa-concierge-bell"></i> Serviço</li>
-                            <li><i class="fa fa-envelope"></i> Contato</li>
+                            <li data-go="top"><i class="fa fa-home"></i> Home</li>
+                            <li data-go="sobre"><i class="fa fa-info"></i> Sobre</li>
+                            <li data-go="portfolio"><i class="fa fa-image"></i> Galeria</li>
+                            <li data-go="servicos"><i class="fa fa-concierge-bell"></i> Serviço</li>
+                            <li data-go="contato"><i class="fa fa-envelope"></i> Contato</li>
                         </ul>
                     </div>
                 </div>
@@ -63,265 +73,185 @@
                 </div>
             </div>
         </div>
-    </header>    
-    <main>
-        <section class="sections">
-            <div class="sections__pop-up">
-                <div class="section__titulos">
-                    <p class="section__titulos__subtitulo">Sobre Nós</p>
-                    <h2>
-                        <span>01.</span> Descubra nossa história
-                    </h2>
+    </header>
+    <main id="garage" class="g-main">
+        <section id="sobre" class="g-sec g-sobre" data-scene="sobre">
+            <div class="g-wrap g-sobre__grid">
+                <div class="g-sobre__copy">
+                    <p class="g-tag" data-rv="slide"><b>01</b>Sobre nós</p>
+                    <h2 class="g-h2" data-rv="wipe">Descubra nossa história</h2>
+                    <div class="g-acc" data-rv="slide">
+                <div class="g-acc__item">
+                    <h3><button type="button" class="g-acc__btn" id="acc-b1" aria-expanded="false" aria-controls="acc-p1"><span>Quem somos e o que fazemos</span><i class="g-plus" aria-hidden="true"></i></button></h3>
+                    <div class="g-acc__panel" id="acc-p1" role="region" aria-labelledby="acc-b1"><div><p>A Garage é uma oficina feita para quem ama carro. Reunimos mecânicos e preparadores para deixar cada veículo mais rápido, mais seguro e com visual de pista, e explicamos cada passo do trabalho.</p></div></div>
                 </div>
-                <div class="sections__pop-up__caixas">
-                    <div class="sections__pop-up__caixas__titulos">
-                        <p>Quem Somos e o Que Fazemos</p>
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                    <div class="sections__pop-up__caixas__textos">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam soluta iste eum Beatae quis
-                            praesentium corporis, et nam facilis, ratione nostrum aliquid explicabo quae nisi totam,
-                            quisquam amet.</p>
-                    </div>
-                    <div class="sections__pop-up__caixas__titulos">
-                        <p>A Jornada da Nossa Marca</p>
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                    <div class="sections__pop-up__caixas__textos">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsum sit commodi, nisi
-                            obcaecati, tempora asperiores perferendis eligendi eos autem officia vel dolor saepe a,
-                            doloribus nemo sed corporis officiis.</p>
-                    </div>
-                    <div class="sections__pop-up__caixas__titulos">
-                        <p>Nossa Participação na Fórmula 1</p>
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                    <div class="sections__pop-up__caixas__textos">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita dolor delectus et
-                            aut temporibus dolorum hic ut quia maiores nihil alias autem placeat quod recusandae dolore
-                            consectetur, corporis cumque!</p>
-                    </div>
+                <div class="g-acc__item">
+                    <h3><button type="button" class="g-acc__btn" id="acc-b2" aria-expanded="false" aria-controls="acc-p2"><span>A jornada da nossa marca</span><i class="g-plus" aria-hidden="true"></i></button></h3>
+                    <div class="g-acc__panel" id="acc-p2" role="region" aria-labelledby="acc-b2"><div><p>Nossa marca nasceu da vontade de fazer oficina de outro jeito: técnica, transparente e com cuidado em cada detalhe. Cada projeto entregue eleva o padrão do próximo.</p></div></div>
                 </div>
-                <button>Ler mais</button>
-            </div>
-            <div class="sections__container-video">
-                <div class="sections__container-video__capa">
-                    <iframe src="https://www.youtube-nocookie.com/embed/viW44cUfxCE?si=dgnSFQatLhVCN_th"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="g-acc__item">
+                    <h3><button type="button" class="g-acc__btn" id="acc-b3" aria-expanded="false" aria-controls="acc-p3"><span>Nossa participação na Fórmula 1</span><i class="g-plus" aria-hidden="true"></i></button></h3>
+                    <div class="g-acc__panel" id="acc-p3" role="region" aria-labelledby="acc-b3"><div><p>Da pista para a garagem: a Fórmula 1 é a nossa maior referência em precisão, trabalho em equipe e velocidade de execução. Aqui, cada serviço é tratado como um pit stop: planejado, rápido e sem margem para erro.</p></div></div>
+                </div>
+                    </div>
+                    <a class="g-btn" href="#servicos" data-rv="slide">Ver nossos serviços</a>
                 </div>
             </div>
         </section>
-        <section class="sections">
-            <div class="sections__container-serviços">
-                <div class="section__titulos">
-                    <p class="section__titulos__subtitulo">Serviços</p>
-                    <h2>
-                        <span>02.</span> Seviços da nossa garagem
-                    </h2>
+
+        <section id="processo" class="g-proc" data-scene="proc" aria-label="Como trabalhamos">
+            <div class="g-proc__track" id="g-proc-track">
+                <div class="g-proc__sticky">
+                    <div class="g-wrap g-proc__head">
+                        <p class="g-tag" data-rv="slide"><b>+</b>Como trabalhamos</p>
+                        <h2 class="g-h2 g-h2--sm" data-rv="wipe">Do pit à entrega</h2>
+                    </div>
+                    <ol class="g-proc__rail" id="g-proc-rail">
+                        <li class="g-step"><span class="g-step__n" aria-hidden="true">1</span><h3>Recepção</h3><p>Ouvimos você e o carro. Uma inspeção inicial registra o que está acontecendo antes de qualquer peça ser tocada.</p></li>
+                        <li class="g-step"><span class="g-step__n" aria-hidden="true">2</span><h3>Diagnóstico</h3><p>Levantamos o que realmente precisa de atenção e você recebe um orçamento claro, antes de qualquer serviço começar.</p></li>
+                        <li class="g-step"><span class="g-step__n" aria-hidden="true">3</span><h3>Oficina</h3><p>Mecânicos e preparadores executam o trabalho com as peças certas, no ritmo de um pit stop e com atenção a cada detalhe.</p></li>
+                        <li class="g-step"><span class="g-step__n" aria-hidden="true">4</span><h3>Entrega</h3><p>Testamos o carro, mostramos o que foi feito e entregamos tudo pronto para voltar à estrada.</p></li>
+                    </ol>
+                    <div class="g-proc__road" aria-hidden="true"><b id="g-proc-fill"></b></div>
                 </div>
-                <div class="sections__container-serviços__agrupador">
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Tunagem de qualquer veículo</h3>
-                        <p>Todo detalhe do seu carro pode ser tunado, modificado e potencializado! Seu passeio terá a
-                            melhor aparência e dirigibilidade possível!</p>
-                    </div>
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Reparo de qualquer veículo</h3>
-                        <p>Qualquer modelo de carro pode ser reparado e tunado na garagem. Aqui, seu carro ganhará uma
-                            nova vida e dirigirá de forma extremamente suave.</p>
-                    </div>
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Loja de peças automotivas</h3>
-                        <p>Qualquer modelo de carro pode ser reparado e tunado na garagem. Aqui, seu carro ganhará uma
-                            nova vida e dirigirá de forma extremamente suave.</p>
-                    </div>
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Diagnóstico completo</h3>
-                        <p>O diagnóstico completo do veículo pode ser feito em até 5 dias, dependendo do modelo do seu
-                            automóvel e da complexidade.</p>
-                    </div>
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Venda de carros</h3>
-                        <p>Na garagem, você pode comprar um carro a preços acessíveis e ter certeza de que ele está
-                            completamente pronto para dirigir!</p>
-                    </div>
-                    <div class="sections__container-serviços__agrupador__textos">
-                        <h3>Lava-rápido</h3>
-                        <p>Serviço de lava-rápido para manter seu carro sempre limpo e brilhando.</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="g-serv" data-scene="serv">
+            <div class="g-serv__track" id="g-serv-track">
+                <div class="g-serv__sticky">
+                    <div class="g-wrap g-serv__grid">
+                        <div class="g-serv__copy">
+                            <p class="g-tag" data-rv="slide"><b>02</b>Serviços</p>
+                            <h2 class="g-h2 g-h2--sm" data-rv="wipe">Serviços da nossa garagem</h2>
+                            <ol class="g-serv__list" id="g-serv-list">
+                    <li class="g-serv__item" data-mark="Roda">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Tunagem de qualquer veículo</span></button>
+                        <div class="g-serv__desc"><div><p>Todo detalhe do seu carro pode ser tunado, modificado e potencializado! Seu passeio terá a melhor aparência e dirigibilidade possível!</p></div></div>
+                    </li>
+                    <li class="g-serv__item" data-mark="Pinça de freio">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Reparo de qualquer veículo</span></button>
+                        <div class="g-serv__desc"><div><p>Qualquer modelo de carro pode ser reparado na garagem. Aqui, seu carro ganha uma nova vida e dirige de forma extremamente suave.</p></div></div>
+                    </li>
+                    <li class="g-serv__item" data-mark="Cubo e porca">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Loja de peças automotivas</span></button>
+                        <div class="g-serv__desc"><div><p>Peças para manter e melhorar o seu carro, com orientação de quem monta e testa. Você leva o que realmente serve para o seu modelo.</p></div></div>
+                    </li>
+                    <li class="g-serv__item" data-mark="Disco de freio">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Diagnóstico completo</span></button>
+                        <div class="g-serv__desc"><div><p>O diagnóstico completo do veículo pode ser feito em até 5 dias, dependendo do modelo do seu automóvel e da complexidade.</p></div></div>
+                    </li>
+                    <li class="g-serv__item" data-mark="Conjunto completo">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Venda de carros</span></button>
+                        <div class="g-serv__desc"><div><p>Na garagem, você pode comprar um carro a preços acessíveis e ter certeza de que ele está completamente pronto para dirigir!</p></div></div>
+                    </li>
+                    <li class="g-serv__item" data-mark="Pneu">
+                        <button type="button" class="g-serv__btn" aria-expanded="false"><span>Lava-rápido</span></button>
+                        <div class="g-serv__desc"><div><p>Serviço de lava-rápido para manter seu carro sempre limpo e brilhando.</p></div></div>
+                    </li>
+                            </ol>
+                            <p class="g-serv__count" aria-hidden="true"><b id="g-serv-n">1</b> / 6</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="sections">
-            <div class="sections__posters"></div>
-            <div class="sections__posters"></div>
-            <div class="sections__posters"></div>
-        </section>
-        <section class="sections">
-            <div class="sections__galeria">
-                <div class="section__titulos">
-                    <p class="section__titulos__subtitulo">Portfólio</p>
-                    <h2>
-                        <span>03.</span> Realizado com maestria por nossa equipe
-                    </h2>
-                </div>
-                <div class="sections__galeria__layout">
-                    <div class="sections__galeria__layout-itens"></div>
-                    <div class="sections__galeria__layout-itens"></div>
-                    <div class="sections__galeria__layout-itens"></div>
-                    <div class="sections__galeria__layout-itens sections__galeria__layout-itens--especial"></div>
-                    <div class="sections__galeria__layout-itens"></div>
-                    <div class="sections__galeria__layout-itens"></div>
-                    <div class="sections__galeria__layout-itens"></div>
+
+        <section id="portfolio" class="g-port" data-scene="port">
+            <div class="g-port__track" id="g-port-track">
+                <div class="g-port__sticky">
+                    <div class="g-port__road" id="g-port-road" aria-hidden="true"></div>
+                    <div class="g-wrap g-port__intro" id="g-port-intro">
+                        <p class="g-tag" data-rv="slide"><b>03</b>Portfólio</p>
+                        <h2 class="g-h2" data-rv="wipe">Realizado com maestria por nossa equipe</h2>
+                    </div>
+                    <div class="g-port__scene" id="g-port-scene">
+                    <figure class="g-shot" data-i="0"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 01"><img src="./src/assets/img/carros/poster1.jpg" alt="Carro de pista azul número 24 em estúdio" width="1128" height="564" loading="lazy" decoding="async"></button></figure>
+                    <figure class="g-shot" data-i="1"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 02"><img src="./src/assets/img/carros/poster2.jpg" alt="Carro de rali vermelho e branco em garagem" width="564" height="550" loading="lazy" decoding="async"></button></figure>
+                    <figure class="g-shot" data-i="2"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 03"><img src="./src/assets/img/carros/poster3.jpg" alt="Frente de carro esportivo preto com detalhes vermelhos" width="564" height="1002" loading="lazy" decoding="async"></button></figure>
+                    <figure class="g-shot" data-i="3"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 04"><img src="./src/assets/img/carros/poster4.jpg" alt="Supercarro branco com detalhes laranja visto de cima" width="564" height="564" loading="lazy" decoding="async"></button></figure>
+                    <figure class="g-shot" data-i="4"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 05"><img src="./src/assets/img/carros/poster5.jpg" alt="Carro de corrida verde em pista" width="564" height="423" loading="lazy" decoding="async"></button></figure>
+                    <figure class="g-shot" data-i="5"><button type="button" class="g-shot__btn" aria-label="Ampliar projeto 06"><img src="./src/assets/img/carros/poster6.jpg" alt="Carro branco rebaixado com rodas largas em hangar" width="564" height="564" loading="lazy" decoding="async"></button></figure>
+                    </div>
+                    <p class="g-port__count" aria-hidden="true"><b id="g-port-n">01</b> / 06</p>
+                    <i class="g-port__bar" aria-hidden="true"><b id="g-port-fill"></b></i>
                 </div>
             </div>
         </section>
-        <section class="sections">
-            <div class="sections__opiniões">
-                <div class="section__titulos">
-                    <p class="section__titulos__subtitulo">Opiniões</p>
-                    <h2>
-                        <span>04.</span> O que nossos clientes dizem
-                    </h2>
-                </div>
-                <div class="sections__opiniões__gerenciador">
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- Vitor Moreira</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- Gustavo Oliveira</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- Cláudio Pereira</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- Maria Fernanda</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- Pedro Fagundes</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sections__opiniões__itens">
-                        <div class="sections__opiniões__itens__aspas">
-                            <span>"</span>
-                        </div>
-                        <div class="sections__opiniões__itens__textos">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure optio magnam consequuntur
-                                cumque sequi tempora? Animi deserunt hic amet aliquid, veniam qui cum, esse dignissimos
-                                earum perspiciatis architecto consequuntur neque</p>
-                            <div class="sections__opiniões__itens__textos__autores">
-                                <p class="sections__opiniões__itens__textos__autores__nome">- John Alston</p>
-                                <p class="sections__opiniões__itens__textos__autores__status">Cliente</p>
-                            </div>
-                        </div>
+
+        <section id="opinioes" class="g-op" data-scene="op">
+            <div class="g-wrap">
+                <p class="g-tag g-tag--dark" data-rv="slide"><b>04</b>Opiniões</p>
+                <h2 class="g-h2 g-h2--dark" data-rv="wipe">O que nossos clientes dizem</h2>
+                <div class="g-cf" id="g-cf" role="group" aria-roledescription="carrossel" aria-label="Depoimentos de clientes" tabindex="0">
+                    <div class="g-cf__stage" id="g-cf-stage">
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>Entreguei o carro com um barulho estranho e voltei para buscar sem nenhum. Eles mostraram a peça trocada e explicaram tudo.</p></blockquote><footer><span class="g-quote__name">Vitor Moreira</span><span class="g-quote__plate">Cliente</span></footer></article>
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>A tunagem ficou exatamente como eu imaginei. O carro está mais firme na curva e o visual chama atenção onde passa.</p></blockquote><footer><span class="g-quote__name">Gustavo Oliveira</span><span class="g-quote__plate">Cliente</span></footer></article>
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>Fiz o diagnóstico completo antes de viajar. Prazo cumprido e um relatório claro do que precisava de atenção.</p></blockquote><footer><span class="g-quote__name">Cláudio Pereira</span><span class="g-quote__plate">Cliente</span></footer></article>
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>Atendimento direto, sem enrolação. Comprei meu carro aqui e ele já saiu revisado e pronto para rodar.</p></blockquote><footer><span class="g-quote__name">Maria Fernanda</span><span class="g-quote__plate">Cliente</span></footer></article>
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>Levei para o lava-rápido e acabei fechando a revisão. Cuidado com cada detalhe, até nos cantos que ninguém olha.</p></blockquote><footer><span class="g-quote__name">Pedro Fagundes</span><span class="g-quote__plate">Cliente</span></footer></article>
+                    <article class="g-quote"><span class="g-quote__mark" aria-hidden="true">&ldquo;</span><blockquote><p>Equipe técnica de verdade. Resolveram em um dia o que outras oficinas não tinham conseguido achar.</p></blockquote><footer><span class="g-quote__name">John Alston</span><span class="g-quote__plate">Cliente</span></footer></article>
                     </div>
                 </div>
-                <div class="sections__opiniões__navegação">
-                    <div class="sections__opiniões__navegação__pontos" id="ponto1"></div>
-                    <div class="sections__opiniões__navegação__pontos" id="ponto2"></div>
-                    <div class="sections__opiniões__navegação__pontos" id="ponto3"></div>
+                <div class="g-cf__ctrl">
+                    <button type="button" class="g-cf__arrow" id="g-cf-prev" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                    <div class="g-cf__dots" id="g-cf-dots"></div>
+                    <button type="button" class="g-cf__arrow" id="g-cf-next" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer__contact">
-            <div class="footer__contact-info">
-                <i class="fa-regular fa-envelope"></i>
-                <p class="footer__contact-text">INSCREVA-SE PARA MAIS NOVIDADES</p>
-            </div>
-            <div class="footer__contact-form">
-                <input class="footer__contact-input" type="text" placeholder="Insira Seu Email Aqui">
-                <button class="footer__contact-button">Enviar</button>
+
+    <footer id="contato" class="g-footer" data-scene="foot">
+        <div class="g-wrap g-footer__top">
+            <div class="g-gauge" id="g-gauge" aria-hidden="true"></div>
+            <div class="g-footer__cta">
+                <p class="g-tag" data-rv="slide"><b>05</b>Contato</p>
+                <h2 class="g-h2" data-rv="wipe">Inscreva&#8209;se para mais novidades</h2>
+                <form class="g-news" id="g-news" novalidate data-rv="slide">
+                    <label class="g-sr" for="g-news-email">Seu e-mail</label>
+                    <input id="g-news-email" type="email" placeholder="Insira seu e-mail aqui" autocomplete="email" required>
+                    <button type="submit">Enviar</button>
+                    <p class="g-news__msg" id="g-news-msg" role="status"></p>
+                </form>
             </div>
         </div>
-        <div class="footer__main">
-            <div class="footer__container">
-                <div class="footer__section footer__section--links">
-                    <h2 class="footer__section-title">Links Rápidos</h2>
-                    <ul class="footer__section-list">
-                        <li class="footer__section-item"><a class="footer__section-link" href="#">Sobre</a></li>
-                        <li class="footer__section-item"><a class="footer__section-link" href="#">Galeria</a></li>
-                        <li class="footer__section-item"><a class="footer__section-link" href="#">Serviço</a></li>
-                    </ul>
-                </div>
-                <div class="footer__section footer__section--contact">
-                    <h2 class="footer__section-title">Contato</h2>
-                    <p class="footer__contact-address"><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123, Cidade, País</p>
-                    <p class="footer__contact-phone"><i class="fas fa-phone"></i> +55 123 456 7890</p>
-                    <p class="footer__contact-email"><i class="fas fa-envelope"></i> garage@veiculo.com</p>
-                </div>
-                <div class="footer__section footer__section--social">
-                    <h2 class="footer__section-title">Redes Sociais</h2>
-                    <div class="footer__social-icons">
-                        <a class="footer__social-icon" href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a class="footer__social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="footer__social-icon" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="footer__social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+        <div class="g-wrap g-footer__cols">
+            <div>
+                <h3>Links rápidos</h3>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Galeria</a></li>
+                    <li><a href="#servicos">Serviço</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123, Cidade, País</p>
+                <p><i class="fas fa-phone"></i> +55 123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> garage@veiculo.com</p>
+            </div>
+            <div>
+                <h3>Redes sociais</h3>
+                <div class="g-social">
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer__bottom">
-                &copy; 2024 Garage | Todos os direitos reservados.
-            </div>
-        </div>           
-    </footer>    
+        </div>
+        <p class="g-footer__bottom">&copy; <span id="g-year">2024</span> Garage | Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="g-lb" id="g-lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+        <button type="button" class="g-lb__close" id="g-lb-close" aria-label="Fechar">&times;</button>
+        <button type="button" class="g-lb__nav g-lb__nav--prev" id="g-lb-prev" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <img id="g-lb-img" alt="">
+        <button type="button" class="g-lb__nav g-lb__nav--next" id="g-lb-next" aria-label="Próximo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+
+    <script src="./public/assets/js/vendor/three.min.js"></script>
     <script src="./public/assets/js/bundle.js"></script>
 </body>
 
